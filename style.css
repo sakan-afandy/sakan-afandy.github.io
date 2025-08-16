@@ -204,3 +204,25 @@ label[for="areaFilter"] {
 .status { top: 10px; left: 10px; }
 .price-tag { bottom: 10px; right: 10px; }
 
+
+/* ✅ تحسين للموبايل */
+@media (max-width: 768px) {
+  .slider {
+    border-radius: 8px;
+  }
+
+  .slide img {
+    height: 220px; /* ارتفاع مناسب للموبايل */
+  }
+}
+
+@media (max-width: 480px) {
+  .slide img {
+    height: 180px; /* أصغر للموبايل الصغير */
+  }
+
+  .dots button {
+    width: 8px;
+    height: 8px;
+  }
+}
