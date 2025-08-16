@@ -226,3 +226,115 @@ label[for="areaFilter"] {
     height: 8px;
   }
 }
+
+/* ====== الموبايل ====== */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #004080;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .menu a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+/* ✅ القواعد العامة (موبايل أولاً) */
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 0 10px;
+}
+
+/* الهيرو */
+.hero h1 { font-size: 16px; }
+.hero p { font-size: 15px; }
+
+/* الكروت (موبايل) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* التصنيفات */
+.categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+/* الفوتر */
+.foot {
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+/* ✅ من 600px (تابلت صغير) */
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .foot {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ✅ من 900px (تابلت كبير / لابتوب صغير) */
+@media (min-width: 900px) {
+  .hero h1 { font-size: 34px; }
+  .hero p { font-size: 16px; }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .foot {
+    grid-template-columns: 1.2fr .8fr .8fr;
+  }
+}
+
+/* ✅ من 1200px (شاشات كبيرة) */
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+
+  .hero h1 { font-size: 40px; }
+  .hero p { font-size: 18px; }
+
+  .categories {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* ✅ تحسينات إضافية */
