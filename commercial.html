@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>محلات - سكن أفندي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-badge">س</div> سكن أفندي
+    </div>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="apartments.html"> شقق</a>
+      <a href="students.html">سكن طلاب</a>
+      <a href="villas.html">اراضي</a>
+    </nav>
+  </div>
+</header>
+
+<!-- نفس كودك الأساسي -->
+
+     <!-- فلتر المنطقة -->
+<label for="areaFilter">اختر المنطقة:</label>
+<select id="areaFilter" onchange="applyFilters()">
+  <option value="الكل">الكل</option>
+  <option value="وسط المدينة">وسط المدينة</option>
+  <option value="حي الجامعة">حي الجامعة</option>
+  <option value="ديروط">ديروط</option>
+  <option value="القوصية">القوصية</option>
+  <option value="منفلوط">منفلوط</option>
+  <option value="أبنوب">أبنوب</option>
+  <option value="الفتح">الفتح</option>
+  <option value="صدفا">صدفا</option>
+  <option value="الغنايم">الغنايم</option>
+  <option value="ساحل سليم">ساحل سليم</option>
+  <option value="البداري">البداري</option>
+</select>
+
+<!-- فلتر السعر -->
+<label for="priceFilter">اختر السعر:</label>
+<select id="priceFilter" onchange="applyFilters()">
+  <option value="الكل">الكل</option>
+  <option value="1000">حتى 1000 جنيه</option>
+  <option value="2000">حتى 2000 جنيه</option>
+  <option value="3000">حتى 3000 جنيه</option>
+</select>
+
+<!-- فلتر النوع -->
+<label for="genderFilter">اختر النوع:</label>
+<select id="genderFilter" onchange="applyFilters()">
+  <option value="الكل">الكل</option>
+  <option value="ذكر">ذكر</option>
+  <option value="أنثى">أنثى</option>
+</select>
+
+<!-- نفس كروت الشقق -->
+<section class="section">
+  <div class="container">
+    <h2>سيتم اضافة محلات للشراء والايجار  قريبا ع مستوى اسيوط </h2>
+    <div class="grid">
+
+
+
+      
+
+
+<script>
+let currentSlide = 0;
+let slideImages = [];
+
+function openDetails(title, meta, images, price) {
+  slideImages = images;
+  currentSlide = 0;
+
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalMeta").innerText = meta;
+  document.getElementById("modalPrice").innerText = price;
+
+  document.getElementById("sliderImg").src = slideImages[currentSlide];
+
+  document.getElementById("detailsModal").style.display = "block";
+}
+
+function closeDetails() {
+  document.getElementById("detailsModal").style.display = "none";
+}
+
+function changeSlide(direction) {
+  currentSlide += direction;
+  if (currentSlide < 0) currentSlide = slideImages.length - 1;
+  if (currentSlide >= slideImages.length) currentSlide = 0;
+  document.getElementById("sliderImg").src = slideImages[currentSlide];
+}
+
+// إغلاق عند الضغط خارج المودال
+window.onclick = function(e) {
+  if (e.target == document.getElementById("detailsModal")) {
+    closeDetails();
+  }
+}
+</script>
+
+<script>
+function filterByArea() {
+  let selectedArea = document.getElementById("areaFilter").value;
+  let cards = document.querySelectorAll(".grid .card");
+
+  cards.forEach(card => {
+    let area = card.getAttribute("data-area");
+    if (selectedArea === "الكل" || area === selectedArea) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+<script>
+function bookWhatsApp(button) {
+  let card = button.closest('.card');
+  let title = card.dataset.title;
+  let meta = card.dataset.meta;
+  let price = card.dataset.price;
+  
+  // رقمك بصيغة دولية بدون +
+  let phone = "201097919027";
+  
+  let message = `اهلا أريد معرفة تفاصيل  ${title} - ${meta} - السعر: ${price}`;
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  
+  window.open(url, '_blank');
+}
+</script>
+<script>
+document.querySelectorAll('.thumb.slider').forEach(slider => {
+  let images = slider.querySelectorAll('img');
+  let index = 0;
+  let autoSlide;
+
+  function showSlide(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function nextSlide() {
+    index = (index + 1) % images.length;
+    showSlide(index);
+  }
+
+  function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    showSlide(index);
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoSlide = setInterval(nextSlide, 3000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoSlide);
+  }
+
+  slider.querySelector('.next-btn').addEventListener('click', () => {
+    nextSlide();
+    startAuto();
+  });
+  slider.querySelector('.prev-btn').addEventListener('click', () => {
+    prevSlide();
+    startAuto();
+  });
+
+  // دعم السحب (Swipe) على الموبايل
+  let startX = 0;
+  slider.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  slider.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) { nextSlide(); startAuto(); } // سحب لليسار
+    if (endX - startX > 50) { prevSlide(); startAuto(); } // سحب لليمين
+  });
+
+  startAuto();
+});
+</script> 
+<script>
+function filterByArea() {
+  let selectedArea = document.getElementById("areaFilter").value;
+  let cards = document.querySelectorAll(".grid .card");
+
+  cards.forEach(card => {
+    let meta = card.getAttribute("data-meta"); // "الموقع: حي الجامعة"
+    let area = meta.replace("الموقع: ", "").trim();
+
+    if (selectedArea === "الكل" || area === selectedArea) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script> 
+<script>
+function applyFilters() {
+  let area = document.getElementById("areaFilter").value;
+  let price = document.getElementById("priceFilter").value;
+  let gender = document.getElementById("genderFilter").value;
+
+  document.querySelectorAll(".card").forEach(card => {
+    let cardArea = card.getAttribute("data-meta").replace("الموقع: ", "").trim();
+    let cardPrice = parseInt(card.getAttribute("data-price"));
+    let cardGender = card.getAttribute("data-gender");
+
+    let show = true;
+
+    // فلتر المنطقة
+    if (area !== "الكل" && cardArea !== area) {
+      show = false;
+    }
+
+    // فلتر السعر
+    if (price !== "الكل" && cardPrice > parseInt(price)) {
+      show = false;
+    }
+
+    // فلتر النوع
+    if (gender !== "الكل" && cardGender !== gender) {
+      show = false;
+    }
+
+    card.style.display = show ? "block" : "none";
+  });
+}
+</script>

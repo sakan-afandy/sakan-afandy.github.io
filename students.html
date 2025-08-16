@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سكن طلبه - سكن أفندي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-badge">س</div> سكن أفندي
+    </div>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="apartments.html">شقق </a>
+      <a href="villas.html">اراضي</a>
+      <a href="commercial.html"> محلات</a>
+    </nav>
+  </div>
+</header>
+
+<!-- نفس كودك الأساسي -->
+
+   <!-- فلتر المنطقة -->
+<label for="areaFilter">اختر المنطقة:</label>
+<select id="areaFilter" onchange="applyFilters()">
+  <option value="الكل">الكل</option>
+  <option value="وسط المدينة">وسط المدينة</option>
+  <option value="حي الجامعة">حي الجامعة</option>
+  <option value="ديروط">ديروط</option>
+  <option value="القوصية">القوصية</option>
+  <option value="منفلوط">منفلوط</option>
+  <option value="أبنوب">أبنوب</option>
+  <option value="الفتح">الفتح</option>
+  <option value="صدفا">صدفا</option>
+  <option value="الغنايم">الغنايم</option>
+  <option value="ساحل سليم">ساحل سليم</option>
+  <option value="البداري">البداري</option>
+</select>
+
+<!-- فلتر السعر -->
+<label for="priceFilter">اختر السعر:</label>
+<select id="priceFilter" onchange="applyFilters()">
+  <option value="الكل">الكل</option>
+  <option value="1000">حتى 1000 جنيه</option>
+  <option value="2000">حتى 2000 جنيه</option>
+  <option value="3000">حتى 3000 جنيه</option>
+</select>
+
+<!-- فلتر النوع -->
+<label for="genderFilter">اختر النوع:</label>
+<select id="genderFilter" onchange="applyFilters()">
+  <option value="الكل">الكل</option>
+  <option value="ذكر">ذكر</option>
+  <option value="أنثى">أنثى</option>
+</select>
+
+<!-- نفس كروت الشقق -->
+ 
+<section class="section">
+  <div class="container">
+    <h2>سكن الطلبه المتاحة</h2>
+    <div class="grid">
+      <!-- كارت 1 -->
+      <div class="card" data-title="شقة 1" data-meta="الموقع: حي الجامعة"  data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+<img src="mahmud.img/12.img/IMG-20250730-WA0128.jpg" class="slider-img active" alt="صورة 1">
+              <img src="mahmud.img/12.img/IMG-20250730-WA0129.jpg" class="slider-img" alt="صورة 2">
+              <img src="mahmud.img/12.img/IMG-20250730-WA0132.jpg" class="slider-img" alt="صورة 3">
+              <img src="mahmud.img/12.img/IMG-20250730-WA0135.jpg" class="slider-img" alt="صورة 4">
+              <img src="mahmud.img/12.img/IMG-20250730-WA0137.jpg" class="slider-img" alt="صورة 5">
+              <img src="mahmud.img/12.img/IMG-20250730-WA0133.jpg" class="slider-img" alt="صورة 6">
+              <img src="mahmud.img/12.img/IMG-20250730-WA0130.jpg" class="slider-img" alt="صورة 7">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه vip شياب جامده - الدور12 اسانسير</h5>
+            <p class="card-text">نص شارع السبيل بعد كافيه سهرايه. مفروش بالكامل، انترنت، 3غرف.7افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد</p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+      <!-- كارت 2 -->
+      <div class="card" data-title="شقة 2" data-meta="الموقع: حي الجامعة" data-price="1250/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="mahmud.img/rof.img/IMG-20250730-WA0145.jpg" class="slider-img active" alt="صورة 1">
+              <img src="mahmud.img/rof.img/IMG-20250730-WA0138.jpg" class="slider-img" alt="صورة 2">
+              <img src="mahmud.img/rof.img/IMG-20250730-WA0141.jpg" class="slider-img" alt="صورة 3">
+              <img src="mahmud.img/rof.img/IMG-20250730-WA0140.jpg" class="slider-img" alt="صورة 4">
+              <img src="mahmud.img/rof.img/IMG-20250730-WA0139.jpg" class="slider-img" alt="صورة 5">
+              <img src="mahmud.img/rof.img/IMG-20250730-WA0147.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1250/جنيه</div>
+  </div>
+  <div class="card-body">
+ <h5 class="card-title">شقه فيلا ف السبيل - روف جامد دور 11اسانسير</h5>
+            <p class="card-text">نص شارع السبيل بعد كافيه سهرايه. مفروش بالكامل، انترنت، .غرف 1 .4 سراير .</p>
+
+        <p class="meta">الموقع:  مصنع سيد</p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+<!-- كارت 3 -->
+      <div class="card" data-title="شقة 3" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+     <h5 class="card-title">شقه متكامله شبابي  - الدور3 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 4 -->
+      <div class="card" data-title="شقة 4" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">سكن اولاد - الدور6 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+<!-- كارت 5 -->
+      <div class="card" data-title="شقة 5" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+                            <img src="hussin porg.img/3.img/IMG-20250730-WA0018.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/3.img/IMG-20250730-WA0018.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/3.img/IMG-20250730-WA0019.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/3.img/IMG-20250730-WA0020.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/3.img/IMG-20250730-WA0021.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/3.img/IMG-20250730-WA0022.jpg" class="slider-img" alt="صورة 6">
+              <img src="hussin porg.img/3.img/IMG-20250730-WA0024.jpg" class="slider-img" alt="صورة 7">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه اولاد - الدور1 علوي</h5>
+            <p class="card-text">نص شارع السبيل بصوص الموشي. مفروش بالكامل، انترنت، 3غرف 6 افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+
+      <!-- كارت 6 -->
+      <div class="card" data-title="شقة 6" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">سكن اولاد - الدور4 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 7 -->
+      <div class="card" data-title="شقة 7" data-meta="الموقع: حي الجامعة" data-price="2000ج/شهري" data-gender="أنثى">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="mahmud.img/3porg2.img/IMG-20250730-WA0157.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="mahmud.img/3porg2.img/IMG-20250730-WA0160.jpg" class="slider-img" alt="صورة 2">
+              <img src="mahmud.img/3porg2.img/IMG-20250730-WA0158.jpg" class="slider-img" alt="صورة 3">
+              <img src="mahmud.img/3porg2.img/IMG-20250730-WA0162.jpg" class="slider-img" alt="صورة 4">
+              <img src="mahmud.img/3porg2.img/IMG-20250730-WA0161.jpg" class="slider-img" alt="صورة 5">
+              <img src="mahmud.img/3porg2.img/IMG-20250730-WA0159.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه سوبر لوكس بنات كليات عليا- الدور - 3 اسانسير </h5>
+            <p class="card-text">نص شارع السبيل مفروش بالكامل، انترنت، غرف 3. 7سراير .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+<!-- كارت 8 -->
+      <div class="card" data-title="شقة 8" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+     <h5 class="card-title">شقه متكامله شبابي  - الدور4 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 9 -->
+      <div class="card" data-title="شقة 9" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="أنثى">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="mahmud.img/3.img/IMG-20250730-WA0122.jpg" class="slider-img active" alt="صورة 1">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0123.jpg" class="slider-img" alt="صورة 2">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0124.jpg" class="slider-img" alt="صورة 3">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0125.jpg" class="slider-img" alt="صورة 4">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0120.jpg" class="slider-img" alt="صورة 5">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0126.jpg" class="slider-img" alt="صورة 6">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0127.jpg" class="slider-img" alt="صورة 7">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> شقه متكامله سوبر لوكس بنات كليات عليا  - الدور - 1 سلم </h5>
+            <p class="card-text">نص شارع السبيل مفروش بالكامل، انترنت، غرف 3. 7سراير .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+<!-- كارت 10 -->
+      <div class="card" data-title="شقة 10" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+     <h5 class="card-title">شقه متكامله شبابي  - الدور 5 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 11 -->
+      <div class="card" data-title="شقة 11" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="أنثى">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="mahmud.img/3.img/IMG-20250730-WA0123.jpg" class="slider-img active" alt="صورة 1">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0122.jpg" class="slider-img" alt="صورة 2">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0124.jpg" class="slider-img" alt="صورة 3">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0125.jpg" class="slider-img" alt="صورة 4">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0120.jpg" class="slider-img" alt="صورة 5">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0126.jpg" class="slider-img" alt="صورة 6">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0127.jpg" class="slider-img" alt="صورة 7">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه سوبر لوكس بنات كليات عليا- الدور - 2 سلم </h5>
+            <p class="card-text">نص شارع السبيل مفروش بالكامل، انترنت، غرف 3. 7سراير .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 12 -->
+      <div class="card" data-title="شقة 12" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="أنثى">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="mahmud.img/3.img/IMG-20250730-WA0124.jpg" class="slider-img active" alt="صورة 1">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0123.jpg" class="slider-img" alt="صورة 2">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0122.jpg" class="slider-img" alt="صورة 3">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0125.jpg" class="slider-img" alt="صورة 4">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0120.jpg" class="slider-img" alt="صورة 5">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0126.jpg" class="slider-img" alt="صورة 6">
+              <img src="mahmud.img/3.img/IMG-20250730-WA0127.jpg" class="slider-img" alt="صورة 7">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه سوبر لوكس بنات كليات عليا- الدور - 3 سلم </h5>
+            <p class="card-text">نص شارع السبيل مفروش بالكامل، انترنت، غرف 3. 7سراير .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+
+      <!-- كارت 13 -->
+      <div class="card" data-title="شقة 13" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+     <h5 class="card-title">شقه متكامله شبابي  - الدور1 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+
+<!-- كارت 14 -->
+      <div class="card" data-title="شقة 14" data-meta="الموقع: حي الجامعة" data-price="2000ج/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+     <h5 class="card-title">شقه متكامله شبابي  - الدور6 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+
+
+      <!-- كارت 15 -->
+      <div class="card" data-title="شقة 15" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="hussin porg.img/7.img/IMG-20250730-WA0039.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/7.img/IMG-20250730-WA0042.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/7.img/IMG-20250730-WA0043.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/7.img/IMG-20250730-WA0044.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/7.img/IMG-20250730-WA0040.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/7.img/IMG-20250730-WA0041.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+            <h5 class="card-title">شقه سوبر لوكس هادئه اولاد - ش7الدور 3 علوي</h5>
+            <p class="card-text">نص شارع السبيل بصوص الموشي. مفروش بالكامل، انترنت، 3غرف 6 افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+
+      <!-- كارت 16 -->
+      <div class="card" data-title="شقة 16" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="s hussin/IMG-20250730-WA0109.jpg" class="slider-img active" alt="صورة 1">
+              <img src="s hussin/IMG-20250730-WA0111.jpg" class="slider-img" alt="صورة 2">
+              <img src="s hussin/IMG-20250730-WA0113.jpg" class="slider-img" alt="صورة 3">
+              <img src="s hussin/IMG-20250730-WA0112.jpg" class="slider-img" alt="صورة 4">
+              <img src="s hussin/IMG-20250730-WA0115.jpg" class="slider-img" alt="صورة 4">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">950/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه متكامله اولاد - الدور علوي 1 سلم</h5>
+            <p class="card-text">شارع السبيل قبل اوكازيون ع الشمال مفروش بالكامل، انترنت، غرف 2 . 6سراير.</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+<!-- كارت 17 -->
+      <div class="card" data-title="شقة 17" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+     <h5 class="card-title">شقه متكامله شبابي  - الدور7 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+      
+      
+      <!-- كارت 18 -->
+      <div class="card" data-title="شقة 18" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="hussin porg.img/6.img/IMG-20250730-WA0034.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/6.img/IMG-20250730-WA0032.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/6.img/IMG-20250730-WA0036.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/6.img/IMG-20250730-WA0031.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/6.img/IMG-20250730-WA0035.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/6.img/IMG-20250730-WA0037.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+            <h5 class="card-title">شقه طلابيه سوبر لوكس اولاد - شقه6 الدور3 سلم </h5>
+            <p class="card-text">نص شارع السبيل بعد كافيه سهرايه. مفروش بالكامل، انترنت، 3غرف.8افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 19 -->
+      <div class="card" data-title="شقة 19" data-meta="الموقع: حي الجامعة" data-price="2000ج/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="elwaleedya/IMG-20250804-WA0034.jpg" class="slider-img active"
+                alt="صورة 1">              
+              <img src="elwaleedya/IMG-20250804-WA0035.jpg" class="slider-img" alt="صورة 2">
+              <img src="elwaleedya/IMG-20250804-WA0036.jpg" class="slider-img" alt="صورة 3">
+              <img src="elwaleedya/IMG-20250804-WA0032.jpg" class="slider-img" alt="صورة 4">
+              <img src="elwaleedya/IMG-20250804-WA0039.jpg" class="slider-img" alt="صورة 5">
+              <img src="elwaleedya/IMG-20250804-WA0040.jpg" class="slider-img" alt="صورة 6">
+              <img src="elwaleedya/IMG-20250804-WA0038.jpg" class="slider-img" alt="صورة 7">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">600/جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"> شقه سوبر ف الوليديه شباب -الدور التاني </h5>
+            <p class="card-text">مسجد ابراهيم عاشور الشارع اللي في وش استديو النورس . مفروش بالكامل، انترنت، 2غرف.6افراد .</p>
+    <p class="meta">الموقع:  الوليديه </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 20 -->
+      <div class="card" data-title="شقة 20" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="seed/IMG-20250804-WA0065.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="seed/IMG-20250804-WA0063.jpg" class="slider-img" alt="صورة 2">
+              <img src="seed/IMG-20250804-WA0062.jpg" class="slider-img" alt="صورة 3">
+              <img src="seed/IMG-20250804-WA0066.jpg" class="slider-img" alt="صورة 4">
+              <img src="seed/IMG-20250804-WA0064.jpg" class="slider-img" alt="صورة 5">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه سوبر لوكس بامكانيات حديثه - الدور5  </h5>
+            <p class="card-text">شارع السبيل عند حلواني الندى   . مفروش بالكامل، انترنت، 3غرف.8افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 21 -->
+      <div class="card" data-title="شقة 21" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="essam/2/IMG-20250808-WA0006.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="essam/2/IMG-20250808-WA0007.jpg" class="slider-img" alt="صورة 2">
+              <img src="essam/2/IMG-20250808-WA0008.jpg" class="slider-img" alt="صورة 3">
+              <img src="essam/2/IMG-20250808-WA0010.jpg" class="slider-img" alt="صورة 5">
+              <img src="essam/2/IMG-20250808-WA0011.jpg" class="slider-img" alt="صورة 5">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه سوبر لوكس بامكانيات حديثه - الدور2 </h5>
+            <p class="card-text">اول شارع السبيل    . مفروش بالكامل، انترنت، 2غرف.5افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+<!-- كارت 22 -->
+      <div class="card" data-title="شقة 22" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="hussin porg.img/5.img/IMG-20250730-WA0025.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/5.img/IMG-20250730-WA0026.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/5.img/IMG-20250730-WA0027.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/5.img/IMG-20250730-WA0028.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/5.img/IMG-20250730-WA0029.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/5.img/IMG-20250730-WA0030.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+            <h5 class="card-title">شقه سوبر اولاد - الدور3 سلم</h5>
+            <p class="card-text">نص شارع السبيل بصوص الموشي. مفروش بالكامل، انترنت، 3غرف 8 افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+
+      <!-- كارت 23 -->
+      <div class="card" data-title="شقة 23" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="essam/3/IMG-20250807-WA0097.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="essam/3/IMG-20250807-WA0091.jpg" class="slider-img" alt="صورة 2">
+              <img src="essam/3/IMG-20250807-WA0092.jpg" class="slider-img" alt="صورة 3">
+              <img src="essam/3/IMG-20250807-WA0097.jpg" class="slider-img" alt="صورة 5">
+              <img src="essam/3/IMG-20250807-WA0100.jpg" class="slider-img" alt="صورة 5">
+              <img src="essam/3/IMG-20250807-WA0109.jpg" class="slider-img" alt="صورة 5">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه سوبر لوكس شبابي بامكانيات حديثه - الدور3 </h5>
+            <p class="card-text">اول شارع السبيل    . مفروش بالكامل، انترنت، 2غرف.5افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+<!-- كارت 24 -->
+      <div class="card" data-title="شقة 24" data-meta="الموقع: حي الجامعة" data-price="1000/شهري"data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+    <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0101.jpg" class="slider-img" alt="صورة 2">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0104.jpg" class="slider-img" alt="صورة 3">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0106.jpg" class="slider-img" alt="صورة 4">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0108.jpg" class="slider-img" alt="صورة 5">
+              <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/جنيه</div>
+  </div>
+  <div class="card-body">
+     <h5 class="card-title">شقه متكامله شبابي  - الدور 5 سلم</h5>
+            <p class="card-text"> شارع السبيل مفروش بالكامل، انترنت، .</p>
+    <p class="meta">الموقع: مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+
+      <!-- كارت 25 -->
+      <div class="card" data-title="شقة 25" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="m,rafat/2/صورة واتساب بتاريخ 2025-08-08 في 00.39.11_0fdb3526.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="m,rafat/2/IMG-20250807-WA0113.jpg" class="slider-img" alt="صورة 2">
+              <img src="m,rafat/2/IMG-20250807-WA0114.jpg" class="slider-img" alt="صورة 3">
+              <img src="m,rafat/2/IMG-20250807-WA0115.jpg" class="slider-img" alt="صورة 5">
+              <img src="m,rafat/2/IMG-20250807-WA0116.jpg" class="slider-img" alt="صورة 5">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه سوبر لوكس بامكانيات حديثه اولاد - الدور1 علوي   </h5>
+            <p class="card-text">شارع النخيل ف السبيل   . مفروش بالكامل، انترنت، 2غرف.6افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 26 -->
+      <div class="card" data-title="شقة 26" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="m,rafat/8/صورة واتساب بتاريخ 2025-08-08 في 02.19.06_6129964c.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="m,rafat/8/IMG-20250808-WA0070.jpg" class="slider-img" alt="صورة 2">
+              <img src="m,rafat/8/IMG-20250808-WA0071.jpg" class="slider-img" alt="صورة 3">
+              <img src="m,rafat/8/IMG-20250808-WA0072.jpg" class="slider-img" alt="صورة 4">
+              <img src="m,rafat/8/IMG-20250808-WA0074.jpg" class="slider-img" alt="صورة 5">
+              <img src="m,rafat/8/IMG-20250808-WA0075.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">شقه جميله  اولاد الدور4اسانسير  </h5>
+            <p class="card-text">مستودع الانابيب  ف السبيل   . مفروش بالكامل، انترنت، 4غرف .9افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+      <!-- كارت 27 -->
+      <div class="card" data-title="شقة 28" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="hussin porg.img/13.img/IMG-20250730-WA0085.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/13.img/IMG-20250730-WA0087.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/13.img/IMG-20250730-WA0089.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/13.img/IMG-20250730-WA0090.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/13.img/IMG-20250730-WA0086.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/13.img/IMG-20250730-WA0088.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">متاحة</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">سكن اولاد - روف جامد الدور7 سلم </h5>
+            <p class="card-text">نص شارع السبيل بعد كافيه سهرايه. مفروش بالكامل، انترنت، 3غرف.8افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+     <button class="btn ghost" onclick="bookWhatsApp(this)">حجز</button>
+  </div>
+</div>
+</div>
+
+
+
+
+      <!-- كارت 28 -->
+      <div class="card" data-title="شقة 28" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="hussin porg.img/8.img/IMG-20250730-WA0046.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/8.img/IMG-20250730-WA0047.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/8.img/IMG-20250730-WA0048.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/8.img/IMG-20250730-WA0050.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/8.img/IMG-20250730-WA0052.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/8.img/IMG-20250730-WA0049.jpg" class="slider-img" alt="صورة 6">
+              <img src="hussin porg.img/8.img/IMG-20250730-WA0051.jpg" class="slider-img" alt="صورة 7">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+            <h5 class="card-title">شقه اولاد - الدور3 سلم </h5>
+            <p class="card-text">نص شارع السبيل بعد كافيه سهرايه. مفروش بالكامل، انترنت،4غرف.8افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+            <!-- كارت 29 -->
+      <div class="card" data-title="شقة 29" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="hussin porg.img/9.img/IMG-20250730-WA0053.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/9.img/IMG-20250730-WA0055.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/9.img/IMG-20250730-WA0057.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/9.img/IMG-20250730-WA0059.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/9.img/IMG-20250730-WA0056.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/9.img/IMG-20250730-WA0054.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+            <h5 class="card-title">شقه عدد قليل سوبر لوكس اولاد - شقه 8 الدور4 سلم </h5>
+            <p class="card-text">نص شارع السبيل بعد كافيه سهرايه. مفروش بالكامل، انترنت، 3غرف.6افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+            <!-- كارت 30 -->
+      <div class="card" data-title="شقة 30" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="hussin porg.img/10.img/IMG-20250730-WA0064.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/10.img/IMG-20250730-WA0061.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/10.img/IMG-20250730-WA0062.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/10.img/IMG-20250730-WA0066.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/10.img/IMG-20250730-WA0067.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/10.img/IMG-20250730-WA0063.jpg" class="slider-img" alt="صورة 6">
+              <img src="hussin porg.img/10.img/IMG-20250730-WA0064.jpg" class="slider-img" alt="صورة 7">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+            <h5 class="card-title">شقه اولاد - الدور5 سلم </h5>
+            <p class="card-text">نص شارع السبيل بعد كافيه سهرايه. مفروش بالكامل، انترنت، 4غرف.8افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+            <!-- كارت 31 -->
+      <div class="card" data-title="شقة 31" data-meta="الموقع: حي الجامعة" data-price="800/شهري" data-gender="ذكر">
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+              <img src="hussin porg.img/11.img/IMG-20250730-WA0077.jpg" class="slider-img active"
+                alt="صورة 1">
+              <img src="hussin porg.img/11.img/IMG-20250730-WA0078.jpg" class="slider-img" alt="صورة 2">
+              <img src="hussin porg.img/11.img/IMG-20250730-WA0082.jpg" class="slider-img" alt="صورة 3">
+              <img src="hussin porg.img/11.img/IMG-20250730-WA0081.jpg" class="slider-img" alt="صورة 4">
+              <img src="hussin porg.img/11.img/IMG-20250730-WA0079.jpg" class="slider-img" alt="صورة 5">
+              <img src="hussin porg.img/11.img/IMG-20250730-WA0080.jpg" class="slider-img" alt="صورة 6">
+    <button class="next-btn">&#10095;</button>
+
+    <div class="status">محجوز</div>
+    <div class="price-tag">1000/ جنيه</div>
+  </div>
+  <div class="card-body">
+            <h5 class="card-title">سكن اولاد متكامل  - الدور6 سلم </h5>
+            <p class="card-text">نص شارع السبيل بعد كافيه سهرايه. مفروش بالكامل، انترنت، 3غرف.6افراد .</p>
+    <p class="meta">الموقع:  مصنع سيد </p>
+  <div class="card-actions">
+<button class="btn ghost booked" disabled>لقد تم حجزه مسبقا </button>
+  </div>
+</div>
+</div>
+
+      
+
+
+<script>
+let currentSlide = 0;
+let slideImages = [];
+
+function openDetails(title, meta, images, price) {
+  slideImages = images;
+  currentSlide = 0;
+
+  document.getElementById("modalTitle").innerText = title;
+  document.getElementById("modalMeta").innerText = meta;
+  document.getElementById("modalPrice").innerText = price;
+
+  document.getElementById("sliderImg").src = slideImages[currentSlide];
+
+  document.getElementById("detailsModal").style.display = "block";
+}
+
+function closeDetails() {
+  document.getElementById("detailsModal").style.display = "none";
+}
+
+function changeSlide(direction) {
+  currentSlide += direction;
+  if (currentSlide < 0) currentSlide = slideImages.length - 1;
+  if (currentSlide >= slideImages.length) currentSlide = 0;
+  document.getElementById("sliderImg").src = slideImages[currentSlide];
+}
+
+// إغلاق عند الضغط خارج المودال
+window.onclick = function(e) {
+  if (e.target == document.getElementById("detailsModal")) {
+    closeDetails();
+  }
+}
+</script>
+
+<script>
+function filterByArea() {
+  let selectedArea = document.getElementById("areaFilter").value;
+  let cards = document.querySelectorAll(".grid .card");
+
+  cards.forEach(card => {
+    let area = card.getAttribute("data-area");
+    if (selectedArea === "الكل" || area === selectedArea) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script>
+<script>
+function bookWhatsApp(button) {
+  let card = button.closest('.card');
+  let title = card.dataset.title;
+  let meta = card.dataset.meta;
+  let price = card.dataset.price;
+  
+  // رقمك بصيغة دولية بدون +
+  let phone = "201097919027";
+  
+  let message = `اهلا أريد معرفة تفاصيل  ${title} - ${meta} - السعر: ${price}`;
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  
+  window.open(url, '_blank');
+}
+</script>
+<script>
+document.querySelectorAll('.thumb.slider').forEach(slider => {
+  let images = slider.querySelectorAll('img');
+  let index = 0;
+  let autoSlide;
+
+  function showSlide(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function nextSlide() {
+    index = (index + 1) % images.length;
+    showSlide(index);
+  }
+
+  function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    showSlide(index);
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoSlide = setInterval(nextSlide, 3000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoSlide);
+  }
+
+  slider.querySelector('.next-btn').addEventListener('click', () => {
+    nextSlide();
+    startAuto();
+  });
+  slider.querySelector('.prev-btn').addEventListener('click', () => {
+    prevSlide();
+    startAuto();
+  });
+
+  // دعم السحب (Swipe) على الموبايل
+  let startX = 0;
+  slider.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  slider.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) { nextSlide(); startAuto(); } // سحب لليسار
+    if (endX - startX > 50) { prevSlide(); startAuto(); } // سحب لليمين
+  });
+
+  startAuto();
+});
+</script> 
+<script>
+function filterByArea() {
+  let selectedArea = document.getElementById("areaFilter").value;
+  let cards = document.querySelectorAll(".grid .card");
+
+  cards.forEach(card => {
+    let meta = card.getAttribute("data-meta"); // "الموقع: حي الجامعة"
+    let area = meta.replace("الموقع: ", "").trim();
+
+    if (selectedArea === "الكل" || area === selectedArea) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+</script> 
+<script>
+function applyFilters() {
+  let area = document.getElementById("areaFilter").value;
+  let price = document.getElementById("priceFilter").value;
+  let gender = document.getElementById("genderFilter").value;
+
+  document.querySelectorAll(".card").forEach(card => {
+    let cardArea = card.getAttribute("data-meta").replace("الموقع: ", "").trim();
+    let cardPrice = parseInt(card.getAttribute("data-price"));
+    let cardGender = card.getAttribute("data-gender");
+
+    let show = true;
+
+    // فلتر المنطقة
+    if (area !== "الكل" && cardArea !== area) {
+      show = false;
+    }
+
+    // فلتر السعر
+    if (price !== "الكل" && cardPrice > parseInt(price)) {
+      show = false;
+    }
+
+    // فلتر النوع
+    if (gender !== "الكل" && cardGender !== gender) {
+      show = false;
+    }
+
+    card.style.display = show ? "block" : "none";
+  });
+}
+</script>

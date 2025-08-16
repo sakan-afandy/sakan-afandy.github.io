@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>واجهة حديثة لشركة عقارات</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="topbar">
+  <div class="container nav">
+    <a href="#" class="brand" aria-label="الرئيسية">
+      <span class="brand-badge">🏠</span>
+      <span> سكن افندي</span>
+    </a>
+    <nav id="mainMenu" class="menu">
+  <a href="#categories">الأقسام</a>
+  <a href="#featured">العقارات</a>
+  <a href="#about">عن الشركة</a>
+  <a href="#contact">تواصل</a>
+  <a href="https://wa.me/201097919027?text=مرحباً%20أريد%20ان اعلن%20عن%20شقق" target="_blank" style="color:green; font-weight:bold;">
+    📢 إعلان عن شقق
+  </a>
+</nav>
+
+    <div class="cta">
+      <button class="btn ghost" onclick="window.location='#contact'">اتصل بنا</button>
+      <button class="burger" id="burger" aria-label="قائمة">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <div class="hero-badges">
+        <span class="badge">خصومات الصيف</span>
+        <span class="badge">بدون عمولة خفية</span>
+        <span class="badge">استشارات مجانية</span>
+      </div>
+      <h1>ابحث عن بيت أحلامك ف اسيوط بسهولة وسرعة</h1>
+      <p>شقق – سكن طلاب – اراضي  – محلات . نخدمك في جميع مناطق اسيوط مع مستشارين عقاريين محترفين.</p>
+      <div class="hero-card">
+        <form onsubmit="event.preventDefault(); document.getElementById('featured').scrollIntoView({behavior:'smooth'});">
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:10px">
+            <input aria-label="ابحث بالموقع أو العنوان" placeholder="ابحث  بالمكان او المدينه أو العنوان" style="padding:12px;border-radius:12px;border:1px solid #1b2948;background:#0b1220;color:#e5e7eb">
+            <select aria-label="النوع" style="padding:12px;border-radius:12px;border:1px solid #1b2948;background:#0b1220;color:#e5e7eb">
+              <option>الكل</option><option>شقة</option><option>سكن طلاب</option><option>اراضي</option><option> محلات</option>
+            </select>
+            <button class="btn" type="submit">بحث</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="slider" aria-label="عروض مميزة">
+  <div class="slides" id="slides">
+    <div class="slide"><img src="image/dowwr-for-properties.jpg" alt="شقق في أسيوط"></div>
+    <div class="slide"><img src="image/17611539225242202411120939393939.jpg" alt="إيراج سكنية"></div>
+    <div class="slide"><img src="image/test3.jpg" alt="شقة جديدة"></div>
+  </div>
+  <div class="dots" id="dots"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section id="categories" class="section">
+  <div class="container">
+    <h2 class="reveal">عايز اي ف اسيوط</h2>
+    <div class="categories">
+      <a class="cat reveal" href="apartments.html">
+        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1400&auto=format&fit=crop" alt="شقق">
+        <div class="overlay">
+          <div class="title"><b>شقق</b><span class="chip">استكشف →</span></div>
+        </div>
+      </a>
+      <a class="cat reveal" href="students.html">
+        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1400&auto=format&fit=crop" alt="سكن طلاب">
+        <div class="overlay">
+          <div class="title"><b>سكن طلاب</b><span class="chip">استكشف →</span></div>
+        </div>
+      </a>
+      <a class="cat reveal" href="villas.html">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1400&auto=format&fit=crop" alt="اراضي">
+        <div class="overlay">
+          <div class="title"><b>اراضي</b><span class="chip">استكشف →</span></div>
+        </div>
+      </a>
+      <a class="cat reveal" href="commercial.html">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1400&auto=format&fit=crop" alt="محلات">
+        <div class="overlay">
+          <div class="title"><b>محلات</b><span class="chip">استكشف →</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Listings -->
+<section id="featured" class="section">
+  <div class="container">
+    <h2 class="reveal">عقارات مميزة ف اسيوط</h2>
+    <div id="cards" class="grid" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="container about">
+    <div class="box reveal">
+      <h2>عن الشركة</h2>
+      <p style="color:#9ca3af">نحن فريق عقاري متخصص، نقدّم حلولاً متكاملة من التسويق والبيع وحتى ما بعد البيع. نغطي الشقق والفلل والسكن الطلابي والعقارات التجارية، مع دعم فني واستشارات مجانية.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px">
+        <div class="box" style="text-align:center"><b style="font-size:22px">174+</b><div style="color:#94a3b8">وحدة مُباعة</div></div>
+        <div class="box" style="text-align:center"><b style="font-size:22px">20</b><div style="color:#94a3b8">مشاريع نشطة</div></div>
+        <div class="box" style="text-align:center"><b style="font-size:22px">1</b><div style="color:#94a3b8">سنوات خبرة</div></div>
+        <div class="box" style="text-align:center"><b style="font-size:22px">280+</b><div style="color:#94a3b8">عملاء سعداء</div></div>
+      </div>
+    </div>
+    <div class="box reveal">
+      <img src="image/dowwr-for-properties.jpg" alt="عن الشركة" style="border-radius:12px">
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="container contact">
+    <div class="reveal">
+      <h2>تواصل معنا</h2>
+      <p style="color:#9ca3af">العنوان: أسيوط — البريد:  — الهاتف: 01097919027</p>
+      <iframe title="خريطة" style="width:100%;height:260px;border:0;border-radius:16px" src="https://maps.google.com/maps?q=Assiut&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+    <form class="reveal" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح!'); this.reset();">
+       <a href="https://wa.me/201097919027?text=مرحباً%20اريد الاستفسار عن %20شقق" target="_blank" style="color:rgb(255, 255, 255); font-weight:bold;">
+    تواصل
+    <img src="image/dowwr-for-properties.jpg" 
+    >
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container foot">
+    <div>
+      <div class="brand"><span class="brand-badge">🏠</span>  سكن افندي</div>
+      <p style="color:#94a3b8">نسعى لرفع معايير تجربة شراء وبيع العقار بأدوات حديثة ف اسيوط</p>
+    </div>
+    <div>
+      <h4>روابط</h4>
+      <div class="menu" style="padding:0">
+        <a href="#categories">الأقسام</a>
+        <a href="#featured">العقارات</a>
+        <a href="#about">عن الشركة</a>
+        <a href="#contact">تواصل</a>
+      </div>
+    </div>
+    <div>
+      <h4>تواصل</h4>
+      <p>01097919027</p>
+      <p></p>
+      <p>أسيوط، مصر</p>
+    </div>
+  </div>
+  <div class="copy">© <span id="year"></span>  سكن افندي. جميع الحقوق محفوظة.</div>
+</footer>
+
+<script>
+  // ====== Mobile menu ======
+  const burger = document.getElementById('burger');
+  const mainMenu = document.getElementById('mainMenu');
+  burger?.addEventListener('click', ()=> mainMenu.classList.toggle('open'));
+
+  // ====== Slider (auto + dots) ======
+  const slides = document.getElementById('slides');
+  const dotsWrap = document.getElementById('dots');
+  const total = slides.children.length;
+  let index = 0; let timer;
+
+  function renderDots(){
+    dotsWrap.innerHTML = '';
+    for(let i=0;i<total;i++){
+      const d = document.createElement('button');
+      d.className = 'dot' + (i===index?' active':'');
+      d.addEventListener('click', ()=>{index=i; update(); resetAuto();});
+      dotsWrap.appendChild(d);
+    }
+  }
+  function update(){
+    slides.style.transform = `translateX(-${index*100}%)`;
+    [...dotsWrap.children].forEach((d,i)=> d.classList.toggle('active', i===index));
+  }
+  function next(){ index = (index+1)%total; update(); }
+  function auto(){ timer = setInterval(next, 4500); }
+  function resetAuto(){ clearInterval(timer); auto(); }
+  renderDots(); update(); auto();
+
+  // ====== Featured cards (dummy data) ======
+  const PROPERTIES = [
+    {id:1, title:" سوف يتم الاضافه قريبا  ", city:"أسيوط", type:"شقة", price:950000, area:130, status:"جديد", img:"//images.unsplash.com/photo-1502003148287-a82ef80a6abc?q=80&w=1200&auto=format&fit=crop"},
+    {id:2, title:" سوف يتم الاضافه قريبا  ", city:"ديروط", type:"سكن طلبه", price:4500000, area:320, status:"مميز", img:"https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop"},
+    {id:3, title:" سوف يتم الاضافه قريبا  ", city:"القوصيه", type:"تجاري", price:1700000, area:90, status:"فرصة", img:"https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop"},
+  ];
+  const numberFmt = n => n.toLocaleString('ar-EG');
+
+  function renderCards(){
+    const wrap = document.getElementById('cards');
+    wrap.innerHTML = '';
+    PROPERTIES.forEach(p=>{
+      const card = document.createElement('div'); card.className = 'card reveal';
+      card.innerHTML = `
+        <div class="thumb">
+          <img src="${p.img}" alt="${p.title}">
+          <span class="status">${p.status}</span>
+          <span class="price-tag">${numberFmt(p.price)} ج.م</span>
+        </div>
+        <div class="card-body">
+          <h3 class="title">${p.title}</h3>
+          <div class="meta">${p.city} • ${p.type} • ${p.area} م²</div>
+        </div>
+        <div class="card-actions">
+          <a class="btn ghost" href="#contact">استفسار</a>
+          <a class="btn" href="#contact">حجز معاينة</a>
+        </div>
+      `;
+      wrap.appendChild(card);
+    });
+  }
+  renderCards();
+
+  // ====== Reveal on scroll ======
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); observer.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
