@@ -26,39 +26,43 @@
 
 <!-- نفس كودك الأساسي -->
 
-   <!-- فلتر المنطقة -->
-<label for="areaFilter">اختر المنطقة:</label>
-<select id="areaFilter" onchange="applyFilters()">
-  <option value="الكل">الكل</option>
-  <option value="وسط المدينة">وسط المدينة</option>
-  <option value="حي الجامعة">حي الجامعة</option>
-  <option value="ديروط">ديروط</option>
-  <option value="القوصية">القوصية</option>
-  <option value="منفلوط">منفلوط</option>
-  <option value="أبنوب">أبنوب</option>
-  <option value="الفتح">الفتح</option>
-  <option value="صدفا">صدفا</option>
-  <option value="الغنايم">الغنايم</option>
-  <option value="ساحل سليم">ساحل سليم</option>
-  <option value="البداري">البداري</option>
-</select>
+   <!-- 🔹 بوكس الفلاتر -->
+<div class="filters-box">
+  <!-- فلتر المنطقة -->
+  <div class="filter-item">
+    <label for="areaFilter">اختر المنطقة:</label>
+    <select id="areaFilter" onchange="applyFilters()">
+      <option value="الكل">الكل</option>
+      <option value="مصنع سيد">مصنع سيد  </option>
+      <option value="الوليديه">الوليديه </option>
+      <option value="مكتبات">مكتبات</option>
+      <option value="سيتي">سيتي</option>
+      <option value="النميس">االنميس</option>
+      <option value="الهلالي">الهلالي</option>
+    </select>
+  </div>
 
-<!-- فلتر السعر -->
-<label for="priceFilter">اختر السعر:</label>
-<select id="priceFilter" onchange="applyFilters()">
-  <option value="الكل">الكل</option>
-  <option value="1000">حتى 1000 جنيه</option>
-  <option value="2000">حتى 2000 جنيه</option>
-  <option value="3000">حتى 3000 جنيه</option>
-</select>
+  <!-- فلتر السعر -->
+  <div class="filter-item">
+    <label for="priceFilter">اختر السعر:</label>
+    <select id="priceFilter" onchange="applyFilters()">
+      <option value="الكل">الكل</option>
+      <option value="1000">حتى 1000 جنيه</option>
+      <option value="2000">حتى 2000 جنيه</option>
+      <option value="3000">حتى 3000 جنيه</option>
+    </select>
+  </div>
 
-<!-- فلتر النوع -->
-<label for="genderFilter">اختر النوع:</label>
-<select id="genderFilter" onchange="applyFilters()">
-  <option value="الكل">الكل</option>
-  <option value="ذكر">ذكر</option>
-  <option value="أنثى">أنثى</option>
-</select>
+  <!-- فلتر النوع -->
+  <div class="filter-item">
+    <label for="genderFilter">اختر النوع:</label>
+    <select id="genderFilter" onchange="applyFilters()">
+      <option value="الكل">الكل</option>
+      <option value="ذكر">ذكر</option>
+      <option value="أنثى">أنثى</option>
+    </select>
+  </div>
+</div>
 
 <!-- نفس كروت الشقق -->
  
@@ -67,7 +71,7 @@
     <h2>سكن الطلبه المتاحة</h2>
     <div class="grid">
       <!-- كارت 1 -->
-      <div class="card" data-title="شقة 1" data-meta="الموقع: حي الجامعة"  data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 1" data-meta="الموقع: مصنع سيد "  data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
 <img src="mahmud.img/12.img/IMG-20250730-WA0128.jpg" class="slider-img active" alt="صورة 1">
@@ -92,7 +96,7 @@
 </div>
 </div>
       <!-- كارت 2 -->
-      <div class="card" data-title="شقة 2" data-meta="الموقع: حي الجامعة" data-price="1250/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 2" data-meta="الموقع: مصنع سيد " data-price="1250/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="mahmud.img/rof.img/IMG-20250730-WA0145.jpg" class="slider-img active" alt="صورة 1">
@@ -118,7 +122,7 @@
 </div>
 
 <!-- كارت 3 -->
-      <div class="card" data-title="شقة 3" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 3" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
@@ -143,7 +147,7 @@
 </div>
 
       <!-- كارت 4 -->
-      <div class="card" data-title="شقة 4" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 4" data-meta="الموقع:  مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0107.jpg" class="slider-img active" alt="صورة 1">
@@ -168,7 +172,7 @@
 </div>
 
 <!-- كارت 5 -->
-      <div class="card" data-title="شقة 5" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 5" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
                             <img src="hussin porg.img/3.img/IMG-20250730-WA0018.jpg" class="slider-img active"
@@ -196,7 +200,7 @@
 
 
       <!-- كارت 6 -->
-      <div class="card" data-title="شقة 6" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 6" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
@@ -221,7 +225,7 @@
 </div>
 
       <!-- كارت 7 -->
-      <div class="card" data-title="شقة 7" data-meta="الموقع: حي الجامعة" data-price="2000ج/شهري" data-gender="أنثى">
+      <div class="card" data-title="شقة 7" data-meta="الموقع: مصنع سيد " data-price="2000ج/شهري" data-gender="أنثى">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="mahmud.img/3porg2.img/IMG-20250730-WA0157.jpg" class="slider-img active"
@@ -247,7 +251,7 @@
 </div>
 
 <!-- كارت 8 -->
-      <div class="card" data-title="شقة 8" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 8" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
@@ -272,7 +276,7 @@
 </div>
 
       <!-- كارت 9 -->
-      <div class="card" data-title="شقة 9" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="أنثى">
+      <div class="card" data-title="شقة 9" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="أنثى">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="mahmud.img/3.img/IMG-20250730-WA0122.jpg" class="slider-img active" alt="صورة 1">
@@ -298,7 +302,7 @@
 </div>
 
 <!-- كارت 10 -->
-      <div class="card" data-title="شقة 10" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 10" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
@@ -323,7 +327,7 @@
 </div>
 
       <!-- كارت 11 -->
-      <div class="card" data-title="شقة 11" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="أنثى">
+      <div class="card" data-title="شقة 11" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="أنثى">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="mahmud.img/3.img/IMG-20250730-WA0123.jpg" class="slider-img active" alt="صورة 1">
@@ -349,7 +353,7 @@
 </div>
 
       <!-- كارت 12 -->
-      <div class="card" data-title="شقة 12" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="أنثى">
+      <div class="card" data-title="شقة 12" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="أنثى">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="mahmud.img/3.img/IMG-20250730-WA0124.jpg" class="slider-img active" alt="صورة 1">
@@ -376,7 +380,7 @@
 
 
       <!-- كارت 13 -->
-      <div class="card" data-title="شقة 13" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 13" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
@@ -402,7 +406,7 @@
 
 
 <!-- كارت 14 -->
-      <div class="card" data-title="شقة 14" data-meta="الموقع: حي الجامعة" data-price="2000ج/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 14" data-meta="الموقع: مصنع سيد " data-price="2000ج/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
@@ -429,7 +433,7 @@
 
 
       <!-- كارت 15 -->
-      <div class="card" data-title="شقة 15" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 15" data-meta="الموقع: مصنع سيد " data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="hussin porg.img/7.img/IMG-20250730-WA0039.jpg" class="slider-img active"
@@ -456,7 +460,7 @@
 
 
       <!-- كارت 16 -->
-      <div class="card" data-title="شقة 16" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 16" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="s hussin/IMG-20250730-WA0109.jpg" class="slider-img active" alt="صورة 1">
@@ -480,7 +484,7 @@
 </div>
 
 <!-- كارت 17 -->
-      <div class="card" data-title="شقة 17" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 17" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
@@ -507,7 +511,7 @@
       
       
       <!-- كارت 18 -->
-      <div class="card" data-title="شقة 18" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 18" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="hussin porg.img/6.img/IMG-20250730-WA0034.jpg" class="slider-img active"
@@ -533,7 +537,7 @@
 </div>
 
       <!-- كارت 19 -->
-      <div class="card" data-title="شقة 19" data-meta="الموقع: حي الجامعة" data-price="2000ج/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 19" data-meta="الموقع: الوليديه  " data-price="2000ج/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="elwaleedya/IMG-20250804-WA0034.jpg" class="slider-img active"
@@ -560,7 +564,7 @@
 </div>
 
       <!-- كارت 20 -->
-      <div class="card" data-title="شقة 20" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 20" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="seed/IMG-20250804-WA0065.jpg" class="slider-img active"
@@ -585,7 +589,7 @@
 </div>
 
       <!-- كارت 21 -->
-      <div class="card" data-title="شقة 21" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 21" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="essam/2/IMG-20250808-WA0006.jpg" class="slider-img active"
@@ -610,7 +614,7 @@
 </div>
 
 <!-- كارت 22 -->
-      <div class="card" data-title="شقة 22" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 22" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="hussin porg.img/5.img/IMG-20250730-WA0025.jpg" class="slider-img active"
@@ -637,7 +641,7 @@
 
 
       <!-- كارت 23 -->
-      <div class="card" data-title="شقة 23" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 23" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="essam/3/IMG-20250807-WA0097.jpg" class="slider-img active"
@@ -663,7 +667,7 @@
 </div>
 
 <!-- كارت 24 -->
-      <div class="card" data-title="شقة 24" data-meta="الموقع: حي الجامعة" data-price="1000/شهري"data-gender="ذكر">
+      <div class="card" data-title="شقة 24" data-meta="الموقع: مصنع سيد" data-price="1000/شهري"data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
     <img src="kareem7.img/1.img/IMG-20250730-WA0105.jpg" class="slider-img active" alt="صورة 1">
@@ -689,7 +693,7 @@
 
 
       <!-- كارت 25 -->
-      <div class="card" data-title="شقة 25" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 25" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="m,rafat/2/صورة واتساب بتاريخ 2025-08-08 في 00.39.11_0fdb3526.jpg" class="slider-img active"
@@ -714,7 +718,7 @@
 </div>
 
       <!-- كارت 26 -->
-      <div class="card" data-title="شقة 26" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 26" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="m,rafat/8/صورة واتساب بتاريخ 2025-08-08 في 02.19.06_6129964c.jpg" class="slider-img active"
@@ -740,7 +744,7 @@
 </div>
 
       <!-- كارت 27 -->
-      <div class="card" data-title="شقة 28" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 28" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="hussin porg.img/13.img/IMG-20250730-WA0085.jpg" class="slider-img active"
@@ -769,7 +773,7 @@
 
 
       <!-- كارت 28 -->
-      <div class="card" data-title="شقة 28" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 28" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="hussin porg.img/8.img/IMG-20250730-WA0046.jpg" class="slider-img active"
@@ -796,7 +800,7 @@
 </div>
 
             <!-- كارت 29 -->
-      <div class="card" data-title="شقة 29" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 29" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="hussin porg.img/9.img/IMG-20250730-WA0053.jpg" class="slider-img active"
@@ -822,7 +826,7 @@
 </div>
 
             <!-- كارت 30 -->
-      <div class="card" data-title="شقة 30" data-meta="الموقع: حي الجامعة" data-price="1000/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 30" data-meta="الموقع: مصنع سيد" data-price="1000/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="hussin porg.img/10.img/IMG-20250730-WA0064.jpg" class="slider-img active"
@@ -849,7 +853,7 @@
 </div>
 
             <!-- كارت 31 -->
-      <div class="card" data-title="شقة 31" data-meta="الموقع: حي الجامعة" data-price="800/شهري" data-gender="ذكر">
+      <div class="card" data-title="شقة 31" data-meta="الموقع: " data-price="800/شهري" data-gender="ذكر">
   <div class="thumb slider">
     <button class="prev-btn">&#10094;</button>
               <img src="hussin porg.img/11.img/IMG-20250730-WA0077.jpg" class="slider-img active"

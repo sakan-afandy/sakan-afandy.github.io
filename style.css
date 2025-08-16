@@ -338,3 +338,54 @@ label[for="areaFilter"] {
   }
 }
 /* ✅ تحسينات إضافية */
+/* بوكس الفلاتر */
+.filters-box {
+  background: #0e1527;
+  border: 1px solid #1b2948;
+  border-radius: 16px;
+  padding: 15px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between; /* توزيع الفلاتر */
+  gap: 16px;
+  align-items: center;
+  flex-wrap: nowrap; /* يمنع النزول لسطر جديد إلا في الموبايل */
+}
+
+/* كل فلتر */
+.filter-item {
+  flex: 1;             /* كل فلتر ياخد نفس الحجم */
+  min-width: 160px;    /* أقل عرض لكل فلتر */
+}
+
+.filter-item label {
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.filter-item select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #1b2948;
+  border-radius: 10px;
+  background: #0b1220;
+  color: #e5e7eb;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* تحسين الهوفر */
+.filter-item select:hover {
+  border-color: var(--brand-2);
+}
+
+/* ريسبونسف للموبايل */
+@media (max-width: 768px) {
+  .filters-box {
+    flex-direction: column; /* يخليهم تحت بعض في الموبايل */
+    gap: 12px;
+  }
+}
