@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سكن طلبه - سكن أفندي</title>
+  <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5576405028824306"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">
+      <div class="brand-badge">🏠</div> سكن أفندي
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="menu" id="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="apartments.html">الشقق</a>
+      <a href="students.html">سكن طلبه</a>
+      <a href="villas.html">اراضي</a>
+      <a href="commercial.html">محلات</a>
+      <a href="car.html">سيارات</a>
+      <a href="Foodstuffs.html">المواد الغذائيه</a>
+      <a href="Devices.html">الاجهزه الكهربائية</a>
+      <a href="clothes.html"> الملابس</a>
+      <a href="Medical.html"> المستلزمات الطبيه</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- نفس كودك الأساسي -->
+
+<!-- 🔹 صندوق الفلاتر -->
+<div class="filters-box">
+  <div class="filter-item search-group">
+    <div class="search-bar">
+      <input 
+        type="text" 
+        id="typeSearch" 
+        placeholder="ابحث عن نوع المنتج"
+      >
+      <button onclick="applyFilters()">🔍</button>
+    </div>
+    <button class="show-all-btn" onclick="showAllCards()">إظهار الكل</button>
+  </div>
+</div>
+
+
+
+
+<!-- نفس كروت الشقق -->
+ 
+<section class="section">
+  <div class="container">
+    <h2>السيارات المتاحة للبيع</h2>
+    <div class="grid">
+      
+      <!-- 🔹 كارت سيارة -->
+      <div class="card" 
+           data-title="مرسيدس e240" 
+           data-meta="الموديل: 2004"  
+           data-price="000,000 جنيه" 
+           data-status="متاحة">
+        
+        <!-- 🔹 صور السيارة (سلايدر) -->
+        <div class="thumb slider">
+          <button class="prev-btn">&#10094;</button>
+          
+          <img src="car/car1/533085092_3021158788045801_1131283956712513733_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          <img src="car/car1/534143022_3021158781379135_3954556879268473264_n.jpg" class="slider-img" alt="تويوتا كورولا 2">
+          
+
+          <button class="next-btn">&#10095;</button>
+
+          <!-- الحالة -->
+          <div class="status">متاحة</div>
+          <!-- السعر -->
+          <div class="price-tag">000,000 جنيه</div>
+        </div>
+
+        
+        <!-- 🔹 تفاصيل السيارة -->
+        <div class="card-body">
+          <h5 class="card-title">2004 مرسيدس e240 </h5>
+          <p class="card-text">
+            أوتوماتيك - فابريكة بالكامل -  - تكييف -  .
+          </p>
+          <p class="meta">الموديل: 2004</p>
+          <div class="card-actions">
+            <button class="btn ghost" onclick="bookWhatsApp(this)">تواصل</button>
+
+          </div>
+        </div>
+      </div>
+
+            <!-- 🔹 كارت سيارة -->
+      <div class="card" 
+           data-title="لانسر شارك " 
+           data-meta="الموديل: 2015"  
+           data-price="650,000 جنيه" 
+           data-status="متاحة">
+        
+        <!-- 🔹 صور السيارة (سلايدر) -->
+        <div class="thumb slider">
+          <button class="prev-btn">&#10094;</button>
+          
+          <img src="/car/car3/533154860_1691507858216141_9182721895499399317_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          <img src="car/car3/533091931_1691507848216142_8252605597069603280_n.jpg" class="slider-img" alt="تويوتا كورولا 2">
+          <img src="/car/car3/533254112_1691507854882808_662254163838974403_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          <img src="car/car3/534705435_1691507844882809_7049992347636616965_n.jpg" class="slider-img" alt="تويوتا كورولا 2">
+          
+
+          <button class="next-btn">&#10095;</button>
+
+          <!-- الحالة -->
+          <div class="status">متاحة</div>
+          <!-- السعر -->
+          <div class="price-tag">000,000 جنيه</div>
+        </div>
+
+        
+        <!-- 🔹 تفاصيل السيارة -->
+        <div class="card-body">
+          <h5 class="card-title">لانسر شارك 2015 </h5>
+          <p class="card-text">
+            أوتوماتيك - فابريكة بالكامل -  - عداد ١١٢ الف قابل للزيادة -  .
+          </p>
+          <p class="meta">الموديل: 2004</p>
+          <div class="card-actions">
+            <button class="btn ghost" onclick="bookWhatsApp(this)">تواصل</button>
+
+          </div>
+        </div>
+      </div>
+            <!-- 🔹 كارت سيارة -->
+      <div class="card" 
+           data-title=" لانسر بومه" 
+           data-meta="الموديل: 2008"  
+           data-price="000,000 جنيه" 
+           data-status="متاحة">
+        
+        <!-- 🔹 صور السيارة (سلايدر) -->
+        <div class="thumb slider">
+          <button class="prev-btn">&#10094;</button>
+          
+          <img src="car/car2/534966381_762996226212339_8929931116720114633_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          <img src="car/car2/533893245_762996236212338_1723567680462328819_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          <img src="car/car2/534304220_762996249545670_7451266045411687949_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          <img src="car/car2/534711838_762996242879004_3038546208835396491_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          <img src="car/car2/533972045_762996246212337_3882663778272006868_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          <img src="car/car2/533145914_762996252879003_2906829243409361147_n.jpg" class="slider-img active" alt="تويوتا كورولا 1">
+          
+          
+
+          <button class="next-btn">&#10095;</button>
+
+          <!-- الحالة -->
+          <div class="status">متاحة</div>
+          <!-- السعر -->
+          <div class="price-tag">000,000 جنيه</div>
+        </div>
+
+        
+        <!-- 🔹 تفاصيل السيارة -->
+        <div class="card-body">
+          <h5 class="card-title">لانسر بومه</h5>
+          <p class="card-text">
+            أوتوماتيك - فابريكة بالكامل -  - تكييف -  .
+          </p>
+          <p class="meta">الموديل: 2008</p>
+          <div class="card-actions">
+            <button class="btn ghost" onclick="bookWhatsApp(this)">تواصل</button>
+
+          </div>
+        </div>
+      </div>
+
+
+    
+
+
+</div>
+  </div>
+</section>
+
+      
+      
+
+
+
+
+      
+
+
+<script>
+// ✅ سلايدر الصور
+document.querySelectorAll('.thumb.slider').forEach(slider => {
+  let images = slider.querySelectorAll('img');
+  let index = 0;
+  let autoSlide;
+
+  function showSlide(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  function nextSlide() {
+    index = (index + 1) % images.length;
+    showSlide(index);
+  }
+
+  function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    showSlide(index);
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoSlide = setInterval(nextSlide, 3000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoSlide);
+  }
+
+  slider.querySelector('.next-btn').addEventListener('click', () => {
+    nextSlide();
+    startAuto();
+  });
+  slider.querySelector('.prev-btn').addEventListener('click', () => {
+    prevSlide();
+    startAuto();
+  });
+
+  // Swipe للموبايل
+  let startX = 0;
+  slider.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  slider.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) { nextSlide(); startAuto(); } // يسار
+    if (endX - startX > 50) { prevSlide(); startAuto(); } // يمين
+  });
+
+  startAuto();
+});
+
+// ✅ بحث عن نوع المنتج
+function applyFilters() {
+  const searchValue = document.getElementById('typeSearch').value.trim().toLowerCase();
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const type = card.getAttribute('data-title').toLowerCase(); 
+    if (!searchValue || type.includes(searchValue)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// ✅ إظهار الكل
+function showAllCards() {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.style.display = 'block';
+  });
+  document.getElementById('typeSearch').value = '';
+}
+
+// ✅ تواصل واتساب
+function bookWhatsApp(button) {
+  let card = button.closest('.card');
+  let title = card.dataset.title;
+  let meta = card.dataset.meta;
+  let price = card.dataset.price;
+  
+  let phone = "201097919027"; // رقمك بصيغة دولية
+  let message = `اهلا، أريد معرفة تفاصيل: ${title} - ${meta} - السعر: ${price}`;
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+
+// ✅ موبايل منيو
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
