@@ -37,54 +37,138 @@
 </header>
 
 
-<!-- نفس كودك الأساسي -->
-
-       <!-- 🔹 بوكس الفلاتر -->
+<!-- 🔹 صندوق الفلاتر -->
 <div class="filters-box">
-  <!-- فلتر المنطقة -->
-  <div class="filter-item">
-    <label for="areaFilter">اختر المنطقة:</label>
-    <select id="areaFilter" onchange="applyFilters()">
-      <option value="الكل">الكل</option>
-      <option value="مصنع سيد">مصنع سيد  </option>
-      <option value="الوليديه">الوليديه </option>
-      <option value="مكتبات">مكتبات</option>
-      <option value="سيتي">سيتي</option>
-      <option value="النميس">االنميس</option>
-      <option value="الهلالي">الهلالي</option>
-    </select>
-  </div>
-
-  <!-- فلتر السعر -->
-  <div class="filter-item">
-    <label for="priceFilter">اختر السعر:</label>
-    <select id="priceFilter" onchange="applyFilters()">
-      <option value="الكل">الكل</option>
-      <option value="1000">حتى 1000 جنيه</option>
-      <option value="2000">حتى 2000 جنيه</option>
-      <option value="3000">حتى 3000 جنيه</option>
-    </select>
-  </div>
-
-  <!-- فلتر النوع -->
-  <div class="filter-item">
-    <label for="genderFilter">اختر النوع:</label>
-    <select id="genderFilter" onchange="applyFilters()">
-      <option value="الكل">الكل</option>
-      <option value="ذكر">ذكر</option>
-      <option value="أنثى">أنثى</option>
-    </select>
+  <div class="filter-item search-group">
+    <div class="search-bar">
+      <input 
+        type="text" 
+        id="typeSearch" 
+        placeholder="ابحث عن نوع المنتج"
+      >
+      <button onclick="applyFilters()">🔍</button>
+    </div>
+    <button class="show-all-btn" onclick="showAllCards()">إظهار الكل</button>
   </div>
 </div>
+
 
 <!-- نفس كروت الشقق -->
  
 <section class="section">
+  <!-- نفس كروت الشقق -->
+ 
+<section class="section">
   <div class="container">
-    <h2>سيتم اضافة شقق للشراء والايجار  قريبا ع مستوى اسيوط </h2>
+    <h2>الشقق المتاحة</h2>
     <div class="grid">
       
       
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="شقة ديروط ابو جبل " 
+     data-meta="الموقع: ديروط -  برج الاصيل "  
+     data-price="1,700,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="شقق/لقطة شاشة 2025-08-20 155409.png" class="slider-img active" alt="صورة 1">
+    <img src="شقق/لقطة شاشة 2025-08-20 155624.png" class="slider-img" alt="صورة 2">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">1,700,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">بيع شقة في برج به أسانسير</h5>
+    <p class="card-text">شقة بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  ابوجبل</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="شقة ديروط  القرشيه" 
+     data-meta="الموقع: ديروط - القرشيه   "  
+     data-price="1,700,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="شقق/لقطة شاشة 2025-08-20 161737.png" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">6,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">بيع شقة في برج به أسانسير</h5>
+    <p class="card-text">شقة بموقع متميز بديروط القرشيه قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -القرشيه</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="شقة ديروط  القرشيه" 
+     data-meta="الموقع: ديروط - [حي حسام كيلاني]   "  
+     data-price="750,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="شقق/لقطة شاشة 2025-08-20 163207.png" class="slider-img active" alt="صورة 1">
+    <img src="شقق//لقطة شاشة 2025-08-20 163225.png" class="slider-img" alt="صورة 2">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">750,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">بيع شقة في برج به أسانسير</h5>
+    <p class="card-text">شقة بموقع متميز بديروط القرشيه قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -القرشيه</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+
+      
+    </div>
+  </div>
 
 
 
@@ -93,73 +177,7 @@
 
 
 <script>
-let currentSlide = 0;
-let slideImages = [];
-
-function openDetails(title, meta, images, price) {
-  slideImages = images;
-  currentSlide = 0;
-
-  document.getElementById("modalTitle").innerText = title;
-  document.getElementById("modalMeta").innerText = meta;
-  document.getElementById("modalPrice").innerText = price;
-
-  document.getElementById("sliderImg").src = slideImages[currentSlide];
-
-  document.getElementById("detailsModal").style.display = "block";
-}
-
-function closeDetails() {
-  document.getElementById("detailsModal").style.display = "none";
-}
-
-function changeSlide(direction) {
-  currentSlide += direction;
-  if (currentSlide < 0) currentSlide = slideImages.length - 1;
-  if (currentSlide >= slideImages.length) currentSlide = 0;
-  document.getElementById("sliderImg").src = slideImages[currentSlide];
-}
-
-// إغلاق عند الضغط خارج المودال
-window.onclick = function(e) {
-  if (e.target == document.getElementById("detailsModal")) {
-    closeDetails();
-  }
-}
-</script>
-
-<script>
-function filterByArea() {
-  let selectedArea = document.getElementById("areaFilter").value;
-  let cards = document.querySelectorAll(".grid .card");
-
-  cards.forEach(card => {
-    let area = card.getAttribute("data-area");
-    if (selectedArea === "الكل" || area === selectedArea) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-  });
-}
-</script>
-<script>
-function bookWhatsApp(button) {
-  let card = button.closest('.card');
-  let title = card.dataset.title;
-  let meta = card.dataset.meta;
-  let price = card.dataset.price;
-  
-  // رقمك بصيغة دولية بدون +
-  let phone = "201097919027";
-  
-  let message = `اهلا أريد معرفة تفاصيل  ${title} - ${meta} - السعر: ${price}`;
-  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-  
-  window.open(url, '_blank');
-}
-</script>
-<script>
+// ✅ سلايدر الصور
 document.querySelectorAll('.thumb.slider').forEach(slider => {
   let images = slider.querySelectorAll('img');
   let index = 0;
@@ -198,69 +216,57 @@ document.querySelectorAll('.thumb.slider').forEach(slider => {
     startAuto();
   });
 
-  // دعم السحب (Swipe) على الموبايل
+  // Swipe للموبايل
   let startX = 0;
   slider.addEventListener('touchstart', e => startX = e.touches[0].clientX);
   slider.addEventListener('touchend', e => {
     let endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) { nextSlide(); startAuto(); } // سحب لليسار
-    if (endX - startX > 50) { prevSlide(); startAuto(); } // سحب لليمين
+    if (startX - endX > 50) { nextSlide(); startAuto(); } // يسار
+    if (endX - startX > 50) { prevSlide(); startAuto(); } // يمين
   });
 
   startAuto();
 });
-</script> 
-<script>
-function filterByArea() {
-  let selectedArea = document.getElementById("areaFilter").value;
-  let cards = document.querySelectorAll(".grid .card");
+
+// ✅ بحث عن نوع المنتج
+function applyFilters() {
+  const searchValue = document.getElementById('typeSearch').value.trim().toLowerCase();
+  const cards = document.querySelectorAll('.card');
 
   cards.forEach(card => {
-    let meta = card.getAttribute("data-meta"); // "الموقع: حي الجامعة"
-    let area = meta.replace("الموقع: ", "").trim();
-
-    if (selectedArea === "الكل" || area === selectedArea) {
-      card.style.display = "block";
+    const type = card.getAttribute('data-title').toLowerCase(); 
+    if (!searchValue || type.includes(searchValue)) {
+      card.style.display = 'block';
     } else {
-      card.style.display = "none";
+      card.style.display = 'none';
     }
   });
 }
-</script> 
-<script>
-function applyFilters() {
-  let area = document.getElementById("areaFilter").value;
-  let price = document.getElementById("priceFilter").value;
-  let gender = document.getElementById("genderFilter").value;
 
-  document.querySelectorAll(".card").forEach(card => {
-    let cardArea = card.getAttribute("data-meta").replace("الموقع: ", "").trim();
-    let cardPrice = parseInt(card.getAttribute("data-price"));
-    let cardGender = card.getAttribute("data-gender");
-
-    let show = true;
-
-    // فلتر المنطقة
-    if (area !== "الكل" && cardArea !== area) {
-      show = false;
-    }
-
-    // فلتر السعر
-    if (price !== "الكل" && cardPrice > parseInt(price)) {
-      show = false;
-    }
-
-    // فلتر النوع
-    if (gender !== "الكل" && cardGender !== gender) {
-      show = false;
-    }
-
-    card.style.display = show ? "block" : "none";
+// ✅ إظهار الكل
+function showAllCards() {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.style.display = 'block';
   });
+  document.getElementById('typeSearch').value = '';
 }
-</script>
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("active");
-  }
+
+// ✅ تواصل واتساب
+function bookWhatsApp(button) {
+  let card = button.closest('.card');
+  let title = card.dataset.title;
+  let meta = card.dataset.meta;
+  let price = card.dataset.price;
+  
+  let phone = "201097919027"; // رقمك بصيغة دولية
+  let message = `اهلا، أريد معرفة تفاصيل: ${title} - ${meta} - السعر: ${price}`;
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+}
+
+// ✅ موبايل منيو
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
 </script>
