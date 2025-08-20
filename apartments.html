@@ -15,9 +15,10 @@
 
 <header class="topbar">
   <div class="container nav">
-    <div class="brand">
-      <div class="brand-badge">🏠</div> سكن أفندي
-    </div>
+    <a href="index.html" class="brand">
+  <div class="brand-badge">🏠</div>
+  <span>سكن أفندي</span>
+</a>
     <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav class="menu" id="menu">
       <a href="index.html">الرئيسية</a>
@@ -27,6 +28,7 @@
       <a href="commercial.html">محلات</a>
       <a href="car.html">سيارات</a>
       <a href="Foodstuffs.html">المواد الغذائيه</a>
+      <a href="mobil.html"> موبايلات</a>
       <a href="Devices.html">الاجهزه الكهربائية</a>
       <a href="clothes.html"> الملابس</a>
       <a href="Medical.html"> المستلزمات الطبيه</a>
@@ -37,39 +39,43 @@
 
 <!-- نفس كودك الأساسي -->
 
-     <!-- فلتر المنطقة -->
-<label for="areaFilter">اختر المنطقة:</label>
-<select id="areaFilter" onchange="applyFilters()">
-  <option value="الكل">الكل</option>
-  <option value="وسط المدينة">وسط المدينة</option>
-  <option value="حي الجامعة">حي الجامعة</option>
-  <option value="ديروط">ديروط</option>
-  <option value="القوصية">القوصية</option>
-  <option value="منفلوط">منفلوط</option>
-  <option value="أبنوب">أبنوب</option>
-  <option value="الفتح">الفتح</option>
-  <option value="صدفا">صدفا</option>
-  <option value="الغنايم">الغنايم</option>
-  <option value="ساحل سليم">ساحل سليم</option>
-  <option value="البداري">البداري</option>
-</select>
+       <!-- 🔹 بوكس الفلاتر -->
+<div class="filters-box">
+  <!-- فلتر المنطقة -->
+  <div class="filter-item">
+    <label for="areaFilter">اختر المنطقة:</label>
+    <select id="areaFilter" onchange="applyFilters()">
+      <option value="الكل">الكل</option>
+      <option value="مصنع سيد">مصنع سيد  </option>
+      <option value="الوليديه">الوليديه </option>
+      <option value="مكتبات">مكتبات</option>
+      <option value="سيتي">سيتي</option>
+      <option value="النميس">االنميس</option>
+      <option value="الهلالي">الهلالي</option>
+    </select>
+  </div>
 
-<!-- فلتر السعر -->
-<label for="priceFilter">اختر السعر:</label>
-<select id="priceFilter" onchange="applyFilters()">
-  <option value="الكل">الكل</option>
-  <option value="1000">حتى 1000 جنيه</option>
-  <option value="2000">حتى 2000 جنيه</option>
-  <option value="3000">حتى 3000 جنيه</option>
-</select>
+  <!-- فلتر السعر -->
+  <div class="filter-item">
+    <label for="priceFilter">اختر السعر:</label>
+    <select id="priceFilter" onchange="applyFilters()">
+      <option value="الكل">الكل</option>
+      <option value="1000">حتى 1000 جنيه</option>
+      <option value="2000">حتى 2000 جنيه</option>
+      <option value="3000">حتى 3000 جنيه</option>
+    </select>
+  </div>
 
-<!-- فلتر النوع -->
-<label for="genderFilter">اختر النوع:</label>
-<select id="genderFilter" onchange="applyFilters()">
-  <option value="الكل">الكل</option>
-  <option value="ذكر">ذكر</option>
-  <option value="أنثى">أنثى</option>
-</select>
+  <!-- فلتر النوع -->
+  <div class="filter-item">
+    <label for="genderFilter">اختر النوع:</label>
+    <select id="genderFilter" onchange="applyFilters()">
+      <option value="الكل">الكل</option>
+      <option value="ذكر">ذكر</option>
+      <option value="أنثى">أنثى</option>
+    </select>
+  </div>
+</div>
 
 <!-- نفس كروت الشقق -->
  
