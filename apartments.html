@@ -78,6 +78,48 @@
     <button class="show-all-btn" onclick="showAllCards()">إظهار الكل</button>
   </div>
 </div>
+<!-- زر الرجوع للأعلى -->
+<button onclick="scrollToTop()" id="backToTop" title="الرجوع للأعلى">↑</button>
+
+<style>
+/* شكل الزر */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none; /* مخفي في البداية */
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+#backToTop:hover {
+  background-color: #1e40af;
+}
+</style>
+
+<script>
+// إظهار/إخفاء الزر عند النزول
+window.onscroll = function() {
+  let btn = document.getElementById("backToTop");
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// عند الضغط يرجع للأعلى بسلاسة
+function scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
 
 
 <!-- نفس كروت الشقق -->
@@ -320,7 +362,7 @@
 
   <!-- 🔹 تفاصيل الشقة -->
   <div class="card-body">
-    <h5 class="card-title">   شقه للبيع اوضه وصاله  </h5>
+    <h5 class="card-title">   شقه للبيع اوضه وصاله دور اول علوي </h5>
     <p class="card-text">شقة بموقع متميز باسيوط قريبه  من الخدمات وبسعر ممتاز.</p>
     <p class="meta">الموقع: اسيوط - المحطه</p>
 
@@ -331,6 +373,75 @@
   </div>
 </div>
 
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="شقه للايجار ديروط نص مفروش" 
+     data-meta="الموقع: ديروط - [ حي حسام كيلاني  ]   "  
+     data-price="4,500 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="شقق/لقطة شاشة 2025-08-21 212620.png" class="slider-img active" alt="صورة 1">
+    <img src="شقق/لقطة شاشة 2025-08-21 212645.png" class="slider-img" alt="صورة 2">
+    <img src="شقق/لقطة شاشة 2025-08-21 212755.png" class="slider-img" alt="صورة 2">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">4,500 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">   شقه للبيع ف حي حسام كيلاني   </h5>
+    <p class="card-text">شقة بموقع متميز بديروط قريبه  من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط - حي حسام كيلاني</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="شقه للايجار ديروط نص مفروش" 
+     data-meta="الموقع: ديروط - [ ابو جبل  ]   "  
+     data-price="3,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="شقق/لقطة شاشة 2025-08-21 221817.png" class="slider-img active" alt="صورة 1">
+    <img src="شقق/لقطة شاشة 2025-08-21 221831.png" class="slider-img" alt="صورة 2">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">3,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title"> شقه للايجار ف ديروط ابو جبل </h5>
+    <p class="card-text">شقة بموقع متميز بديروط، قريبه  من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  </p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
 
 
       
