@@ -65,41 +65,18 @@
 
 <!-- نفس كودك الأساسي -->
 
-        <!-- 🔹 بوكس الفلاتر -->
+<!-- 🔹 صندوق الفلاتر -->
 <div class="filters-box">
-  <!-- فلتر المنطقة -->
-  <div class="filter-item">
-    <label for="areaFilter">اختر المنطقة:</label>
-    <select id="areaFilter" onchange="applyFilters()">
-      <option value="الكل">الكل</option>
-      <option value="مصنع سيد">مصنع سيد  </option>
-      <option value="الوليديه">الوليديه </option>
-      <option value="مكتبات">مكتبات</option>
-      <option value="سيتي">سيتي</option>
-      <option value="النميس">االنميس</option>
-      <option value="الهلالي">الهلالي</option>
-    </select>
-  </div>
-
-  <!-- فلتر السعر -->
-  <div class="filter-item">
-    <label for="priceFilter">اختر السعر:</label>
-    <select id="priceFilter" onchange="applyFilters()">
-      <option value="الكل">الكل</option>
-      <option value="1000">حتى 1000 جنيه</option>
-      <option value="2000">حتى 2000 جنيه</option>
-      <option value="3000">حتى 3000 جنيه</option>
-    </select>
-  </div>
-
-  <!-- فلتر النوع -->
-  <div class="filter-item">
-    <label for="genderFilter">اختر النوع:</label>
-    <select id="genderFilter" onchange="applyFilters()">
-      <option value="الكل">الكل</option>
-      <option value="ذكر">ذكر</option>
-      <option value="أنثى">أنثى</option>
-    </select>
+  <div class="filter-item search-group">
+    <div class="search-bar">
+      <input 
+        type="text" 
+        id="typeSearch" 
+        placeholder="ابحث عن نوع المنتج"
+      >
+      <button onclick="applyFilters()">🔍</button>
+    </div>
+    <button class="show-all-btn" onclick="showAllCards()">إظهار الكل</button>
   </div>
 </div>
 
@@ -146,16 +123,345 @@ function scrollToTop() {
 }
 </script>
 
-
-<!-- نفس كروت الشقق -->
- 
 <section class="section">
   <div class="container">
-    <h2>سيتم اضافة اراضي للشراء والايجار  قريبا ع مستوى اسيوط </h2>
+    <h2>الاراضي المتاحة</h2>
     <div class="grid">
+      
+      
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="ارض قيراط علي الداير شارع جمب البنزيمه الجديده سادس" 
+     data-meta="الموقع: ديروط -   الدائري "  
+     data-price="1,500,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="اراضي/صورة واتساب بتاريخ 2025-08-22 في 02.12.37_e8a484c7.jpg" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">1,500,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">قيراط علي الداير شارع جمب البنزيمه الجديده </h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  الدائري</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+<!-- نهاية كارت شقة -->
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="قيراط علي الداير في الجمب البحري تاني نمره من الاسفلت" 
+     data-meta="الموقع: ديروط -   الدائري "  
+     data-price="3,700,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="اراضي/لقطة شاشة 2025-08-22 212612.png" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">3,700,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">قيراط علي الداير في الجمب البحري تاني نمره من الاسفلت</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  الدائري</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="نص قيراط علي الداير شارع جمب البنزيمه الجديده" 
+     data-meta="الموقع: ديروط -   الدائري "  
+     data-price="800,000جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="اراضي/صورة واتساب بتاريخ 2025-08-22 في 02.12.38_e0882966.jpg" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">800,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">نص قيراط علي الداير شارع جمب البنزيمه الجديده</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  الدائري</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
 
 
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="قيراط علي الداير شارع جمب قاعه بورتو كلاسيك" 
+     data-meta="الموقع: ديروط -   الدائري "  
+     data-price="2,200,000جنيه" 
+     data-status="متاحة">
 
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="اراضي/لقطة شاشة 2025-08-22 213351.png" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">2,200,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">قيراط علي الداير شارع جمب قاعه بورتو كلاسيك</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  الدائري</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="قيراط الا تلت شرق الصنايع تاني نمره من الاسفلت" 
+     data-meta="الموقع: ديروط -   الدائري "  
+     data-price="3,300,000جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="اراضي/لقطة شاشة 2025-08-22 214140.png" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">3,300,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">قيراط الا تلت شرق الصنايع تاني نمره من الاسفلت</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  الصنايع</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="ارض 150 متر جمب مدرسه صم بكم سعر المتر 14 " 
+     data-meta="الموقع: ديروط -   الصم والبكم "  
+     data-price="14,000جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">14,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">ارض 150 متر جمب مدرسه صم بكم سعر المتر 14 الف</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  الصم والبكم</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="ارض  175 متر جمب الصم والبكم سعر المتر 10 الف " 
+     data-meta="الموقع: ديروط -   الصم والبكم "  
+     data-price="10,000جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">10,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">ارض   175 متر جمب الصم والبكم سعر المتر 10 الف</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -  الصم والبكم</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="ارض  175 متر جمب الصم والبكم سعر المتر 10 الف " 
+     data-meta="الموقع: ديروط - الدائري "  
+     data-price="5,250,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">5,250,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">ارض  قيراط علي الداير علي الاسفلت  في الجمب البحري واجهه 8 متر</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -   الدائري</p>
+
+    <!-- 🔹 زر الحجز -->الدائري
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="ارض قيراط الاربع شارع جمب الشيخ خالد بتاع الموتسيكلات " 
+     data-meta="الموقع: ديروط - الدائري "  
+     data-price="2,650,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">2,650,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">ارض  قيراط علي الداير علي الاسفلت  في الجمب البحري واجهه 8 متر</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -   الدائري</p>
+
+    <!-- 🔹 زر الحجز -->الدائري
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="ارض قيراط الاربع شارع جمب الشيخ خالد بتاع الموتسيكلات " 
+     data-meta="الموقع: ديروط - الدائري "  
+     data-price="2,200,000 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">2,200,000 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">ارض قيراط في شارع جمب الشيخ خالد بتاع الموتسيكلات في نص الشارع</h5>
+    <p class="card-text">ارض بموقع متميز بديروط، قريبة من الخدمات وبسعر ممتاز.</p>
+    <p class="meta">الموقع: ديروط -   الدائري</p>
+
+    <!-- 🔹 زر الحجز -->الدائري
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
       
 
 
@@ -330,4 +636,29 @@ function applyFilters() {
   function toggleMenu() {
     document.getElementById("menu").classList.toggle("active");
   }
+
+  // ✅ بحث عن نوع المنتج
+function applyFilters() {
+  const searchValue = document.getElementById('typeSearch').value.trim().toLowerCase();
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const type = card.getAttribute('data-title').toLowerCase(); 
+    if (!searchValue || type.includes(searchValue)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// ✅ إظهار الكل
+function showAllCards() {
+  const cards = document.querySelectorAll('.card');
+  cards.forEach(card => {
+    card.style.display = 'block';
+  });
+  document.getElementById('typeSearch').value = '';
+}
 </script>
+
