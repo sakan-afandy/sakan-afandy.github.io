@@ -132,7 +132,40 @@ function scrollToTop() {
     <h2>سيتم اضافة ملابس قريبا   </h2>
     <div class="grid">
       
-     
+
+      <!-- 🔹 كارت شقة -->
+<div class="card" 
+     data-title="1شنطه اطفال جميله " 
+     data-meta="الموقع: ديروط - اسيوط "  
+     data-price="100 جنيه" 
+     data-status="متاحة">
+
+  <!-- 🔹 صور الشقة (سلايدر) -->
+  <div class="thumb slider">
+    <button class="prev-btn">&#10094;</button>
+
+    <img src="ملابس/IMG-20250823-WA0038.jpg" class="slider-img active" alt="صورة 1">
+
+    <button class="next-btn">&#10095;</button>
+
+    <!-- 🔹 الحالة والسعر -->
+    <div class="status">متاحة</div>
+    <div class="price-tag">100 جنيه</div>
+  </div>
+
+  <!-- 🔹 تفاصيل الشقة -->
+  <div class="card-body">
+    <h5 class="card-title">شنطه اطفال جميله </h5>
+    <p class="card-text">شنطه بخامه حلوه وبسعر الجمله</p>
+    <p class="meta">الموقع: ديروط -  اسيوط</p>
+
+    <!-- 🔹 زر الحجز -->
+    <div class="card-actions">
+      <button class="btn ghost" onclick="bookWhatsApp(this)">حجز عبر واتساب</button>
+    </div>
+  </div>
+</div>
+
 
 
 </div>
@@ -231,7 +264,7 @@ function bookWhatsApp(button) {
   let meta = card.dataset.meta;
   let price = card.dataset.price;
   
-  let phone = "201097919027"; // رقمك بصيغة دولية
+  let phone = "201124153395"; // رقمك بصيغة دولية
   let message = `اهلا، أريد معرفة تفاصيل: ${title} - ${meta} - السعر: ${price}`;
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
