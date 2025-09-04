@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>🛒 سلة المشتريات</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+ <!-- ✅ الهيدر -->
+<header class="topbar">
+  <div class="container nav">
+    <a href="index.html" class="brand">
+  <div class="brand-badge">🏠</div>
+  <span>افندي اسيوط </span>
+</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav class="menu" id="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="apartments.html">الشقق</a>
+      <a href="students.html">سكن طلبه</a>
+      <a href="villas.html">اراضي</a>
+      <a href="commercial.html">محلات</a>
+      <a href="car.html">سيارات</a>
+      <a href="Foodstuffs.html">المواد الغذائيه</a>
+      <a href="mobil.html"> موبايلات</a>
+      <a href="Devices.html">الاجهزه الكهربائية</a>
+      <a href="clothes.html"> الملابس</a>
+      <a href="Medical.html"> المستلزمات الطبيه</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ✅ الهيدر الفرعي -->
+<section class="sub-header">
+  <nav>
+    <a href="mobil.html"><i class="fa-solid fa-house"></i> الرئيسية</a>
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> السلة <span id="cart-count">0</span></a>
+    <a href="https://wa.me/201097919027" target="_blank"><i class="fa-brands fa-whatsapp"></i> اتصل بنا</a>
+  </nav>
+</section>
+
+
+  <!-- ✅ محتوى السلة -->
+  <div class="container">
+    <h1>🛒 سلة المشتريات <span id="item-count">(0 منتجات)</span></h1>
+    <div id="cart"></div>
+    <p class="total">الإجمالي: <span id="total">0</span> جنيه</p>
+<button class="checkout-btn" onclick="checkout()">إتمام الشراء</button>
+<script>
+const phoneNumber = "201097919027"; // ضع رقم واتساب هنا بصيغة دولية
+
+// تحديث عداد الهيدر مباشرة
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCount = document.getElementById("cart-count");
+  const itemCount = document.getElementById("item-count");
+  if(cartCount) cartCount.innerText = cart.length;
+  if(itemCount) itemCount.innerText = `(${cart.length} منتج${cart.length > 1 ? "ات" : ""})`;
+}
+
+// عرض السلة
+function renderCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartDiv = document.getElementById("cart");
+  const totalSpan = document.getElementById("total");
+  cartDiv.innerHTML = "";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    const div = document.createElement("div");
+    div.classList.add("cart-item");
+    div.innerHTML = `
+      <img src="${item.img}" alt="${item.name}">
+      <div class="cart-info">
+        <h3>${item.name}</h3>
+        <p>السعر: ${item.price} جنيه</p>
+      </div>
+      <button class="remove-btn" onclick="removeItem(${index})">إزالة</button>
+    `;
+
+    cartDiv.appendChild(div);
+    total += parseInt(item.price);
+  });
+
+  totalSpan.innerText = total;
+  updateCartCount();
+}
+
+// إزالة منتج
+function removeItem(index) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.splice(index,1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+// زر "إتمام الشراء" يفتح واتساب
+function checkout() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  if(cart.length === 0) { alert("⚠️ السلة فارغة!"); return; }
+
+  let message = "مرحبا، أرغب في شراء المنتجات التالية:\n\n";
+  cart.forEach((item,index)=>{
+    message += `${index+1}. ${item.name}\nالسعر: ${item.price} جنيه\n`;
+    if(item.desc) message += `الوصف: ${item.desc}\n`;
+    message += "\n";
+  });
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url,"_blank");
+}
+
+// عند فتح الصفحة
+document.addEventListener("DOMContentLoaded", renderCart);
+</script>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
