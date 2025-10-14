@@ -1,462 +1,0 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تفاصيل المنتج | متجر الموبايلات</title>
-  <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-
-  <!-- ✅ الهيدر -->
-<header class="topbar">
-  <div class="container nav">
-    <a href="index.html" class="brand">
-  <div class="brand-badge">🏠</div>
-  <span>افندي اسيوط </span>
-</a>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav class="menu" id="menu">
-      <a href="index.html">الرئيسية</a>
-      <a href="apartments.html">الشقق</a>
-      <a href="students.html">سكن طلبه</a>
-      <a href="villas.html">اراضي</a>
-      <a href="commercial.html">محلات</a>
-      <a href="car.html">سيارات</a>
-      <a href="Foodstuffs.html">المواد الغذائيه</a>
-      <a href="mobil.html"> موبايلات</a>
-      <a href="Devices.html">الاجهزه الكهربائية</a>
-      <a href="clothes.html"> الملابس</a>
-      <a href="Medical.html"> المستلزمات الطبيه</a>
-    </nav>
-  </div>
-</header>
-
-<!-- ✅ الهيدر الفرعي -->
-<section class="sub-header">
-  
-  <nav>
-    <a href="mobil.html">الرئيسية</a>
-    <a href="cart.html">🛒 السلة <span id="cart-count">0</span></a>
-    <a href="https://wa.me/201097919027" target="_blank">اتصل بنا</a>
-  </nav>
-</section>
-
-  <!-- ✅ تفاصيل المنتج -->
-  <main>
-    <section class="product-details" id="product-details">
-      <!-- هيتعبى من JS -->
-    </section>
-  </main>
-
-  <!-- ✅ الفوتر -->
-  <footer class="footer">
-    <p>© 2025 موبايلي  | جميع الحقوق محفوظة</p>
-  </footer>
-
-  <script>
-    // 🗂️ بيانات المنتجات
-const products = [
-  {
-    id: 6,
-    name: "Oppo Reno 8",
-    price: "12000",
-    img: "imegs/Oppo-Reno-8-1.webp",
-    desc: "Oppo Reno 8 هاتف متوسط بمواصفات جيدة وكاميرا ممتازة.",
-    specs: [
-      "📱 الشاشة: 6.4 بوصة AMOLED",
-      "⚡ المعالج: MediaTek Dimensity 1300",
-      "📸 الكاميرا: 50MP + 2MP",
-      "🔋 البطارية: 4500mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 7,
-    name: "Realme 10",
-    price: "9000",
-    img: "imegs/Realme-10-1.webp",
-    desc: "Realme 10 هاتف اقتصادي مع أداء ممتاز لشاشة وكاميرا جيدة.",
-    specs: [
-      "📱 الشاشة: 6.4 بوصة AMOLED",
-      "⚡ المعالج: MediaTek Helio G99",
-      "📸 الكاميرا: 50MP + 2MP",
-      "🔋 البطارية: 5000mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 5,
-    name: "Samsung S23",
-    price: "22000",
-    img: "imegs/Samsung-Galaxy-S23-5G.webp",
-    desc: "Samsung Galaxy S23 أحدث هواتف سامسونج مع شاشة Dynamic AMOLED وأداء قوي.",
-    specs: [
-      "📱 الشاشة: 6.1 بوصة Dynamic AMOLED 2X",
-      "⚡ المعالج: Snapdragon 8 Gen 2",
-      "📸 الكاميرا: 50MP + 10MP + 12MP",
-      "🔋 البطارية: 3900mAh",
-      "💾 الذاكرة: 128GB / 256GB"
-    ]
-  },
-   {
-    id: 4,
-    name: "iPhone 14",
-    price: "25000",
-    img: "imegs/Apple-iPhone-14.webp",
-    desc: "iPhone 14 هاتف أبل الجديد مع أداء قوي وكاميرا ممتازة.",
-    specs: [
-      "📱 الشاشة: 6.1 بوصة Super Retina XDR",
-      "⚡ المعالج: A15 Bionic",
-      "📸 الكاميرا: 12MP + 12MP",
-      "🔋 البطارية: 3279mAh",
-      "💾 الذاكرة: 128GB / 256GB"
-     ]
-  },
-    {
-    id: 8,
-    name: "Xiaomi 12",
-    price: "15000",
-    img: "imegs/Xiaomi-12-Pro.webp",
-    desc: "Xiaomi 12 هاتف رائد مع أداء قوي وكاميرا ممتازة.",
-    specs: [
-      "📱 الشاشة: 6.28 بوصة AMOLED",
-      "⚡ المعالج: Snapdragon 8 Gen 1",
-      "📸 الكاميرا: 50MP + 13MP + 5MP",
-      "🔋 البطارية: 4500mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 9,
-    name: "iPhone 13",
-    price: "20000",
-    img: "imegs/IPhone-13.webp",
-    desc: "iPhone 13 هاتف ممتاز مع أداء قوي وشاشة Super Retina.",
-    specs: [
-      "📱 الشاشة: 6.1 بوصة Super Retina XDR",
-      "⚡ المعالج: A15 Bionic",
-      "📸 الكاميرا: 12MP + 12MP",
-      "🔋 البطارية: 3240mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 10,
-    name: "Samsung S22",
-    price: "18000",
-    img: "imegs/Samsung-Galaxy-S22-5G.webp",
-    desc: "Samsung Galaxy S22 هاتف رائد بشاشة Dynamic AMOLED وكاميرا ممتازة.",
-    specs: [
-      "📱 الشاشة: 6.1 بوصة Dynamic AMOLED",
-      "⚡ المعالج: Exynos 2200 / Snapdragon 8 Gen 1",
-      "📸 الكاميرا: 50MP + 10MP + 12MP",
-      "🔋 البطارية: 3700mAh",
-      "💾 الذاكرة: 128GB"
-       ]
-  },
-       {
-    id: 11,
-    name: "Oppo Reno 7",
-    price: "11000",
-    img: "imegs/Oppo-Reno-7-4G.webp",
-    desc: "Oppo Reno 7 هاتف متوسط الأداء مع كاميرا جيدة وشاشة AMOLED.",
-    specs: [
-      "📱 الشاشة: 6.43 بوصة AMOLED",
-      "⚡ المعالج: MediaTek Dimensity 900",
-      "📸 الكاميرا: 64MP + 2MP + 2MP",
-      "🔋 البطارية: 4500mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 12,
-    name: "Realme 9",
-    price: "8500",
-    img: "imegs/Realme-9i.webp",
-    desc: "Realme 9 هاتف اقتصادي مع أداء جيد وشاشة كبيرة.",
-    specs: [
-      "📱 الشاشة: 6.6 بوصة IPS LCD",
-      "⚡ المعالج: Snapdragon 680",
-      "📸 الكاميرا: 50MP + 2MP + 2MP",
-      "🔋 البطارية: 5000mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 13,
-    name: "Xiaomi 11",
-    price: "14000",
-    img: "imegs/Xiaomi-Mi-11-1.webp",
-    desc: "Xiaomi 11 هاتف رائد بشاشة AMOLED وكاميرا ممتازة.",
-    specs: [
-      "📱 الشاشة: 6.81 بوصة AMOLED",
-      "⚡ المعالج: Snapdragon 888",
-      "📸 الكاميرا: 108MP + 13MP + 5MP",
-      "🔋 البطارية: 4600mAh",
-      "💾 الذاكرة: 128GB"
-
-     ]
-  },
-  {
-    id: 14,
-    name: "iPhone 12",
-    price: "18000",
-    img: "imegs/Apple-iPhone-12.webp",
-    desc: "iPhone 12 هاتف رائد بشاشة Super Retina XDR وكاميرا مزدوجة.",
-    specs: [
-      "📱 الشاشة: 6.1 بوصة Super Retina XDR",
-      "⚡ المعالج: A14 Bionic",
-      "📸 الكاميرا: 12MP + 12MP",
-      "🔋 البطارية: 2815mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 15,
-    name: "Samsung S21",
-    price: "16000",
-    img: "imegs/S21-5G.webp",
-    desc: "Samsung Galaxy S21 هاتف رائد مع شاشة Dynamic AMOLED وكاميرا ممتازة.",
-    specs: [
-      "📱 الشاشة: 6.2 بوصة Dynamic AMOLED",
-      "⚡ المعالج: Exynos 2100 / Snapdragon 888",
-      "📸 الكاميرا: 12MP + 64MP + 12MP",
-      "🔋 البطارية: 4000mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-  id: 3,
-  name: "Samsung S21",
-  price: "16000",
-  img: "imegs/S21-5G.webp",
-  desc: "Samsung Galaxy S21 هاتف رائد مع شاشة Dynamic AMOLED وكاميرا ممتازة.",
-  specs: [
-    "📱 الشاشة: 6.2 بوصة Dynamic AMOLED",
-    "⚡ المعالج: Exynos 2100 / Snapdragon 888",
-    "📸 الكاميرا: 12MP + 64MP + 12MP",
-    "🔋 البطارية: 4000mAh",
-    "💾 الذاكرة: 128GB"
-  ]
-},
-{
-    id: 16,
-    name: "Oppo Reno 6",
-    price: "10000",
-    img: "imegs/Oppo-Reno-6.webp",
-    desc: "Oppo Reno 6 هاتف متوسط الأداء مع كاميرا جيدة وشاشة AMOLED.",
-    specs: [
-      "📱 الشاشة: 6.43 بوصة AMOLED",
-      "⚡ المعالج: MediaTek Dimensity 900",
-      "📸 الكاميرا: 64MP + 8MP + 2MP",
-      "🔋 البطارية: 4300mAh",
-      "💾 الذاكرة: 128GB"
-   ]
-  },
-  {
-    id: 17,
-    name: "Realme 8",
-    price: "7500",
-    img: "imegs/Realme-8.webp",
-    desc: "Realme 8 هاتف اقتصادي مع شاشة AMOLED وكاميرا جيدة للاستخدام اليومي.",
-    specs: [
-      "📱 الشاشة: 6.4 بوصة AMOLED",
-      "⚡ المعالج: MediaTek Helio G95",
-      "📸 الكاميرا: 64MP + 8MP + 2MP + 2MP",
-      "🔋 البطارية: 5000mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 18,
-    name: "Xiaomi 10",
-    price: "12000",
-    img: "imegs/Xiaomi-Mi-10.webp",
-    desc: "Xiaomi Mi 10 هاتف رائد مع شاشة AMOLED وكاميرا قوية لأخذ الصور والفيديو.",
-    specs: [
-      "📱 الشاشة: 6.67 بوصة AMOLED",
-      "⚡ المعالج: Snapdragon 865",
-      "📸 الكاميرا: 108MP + 13MP + 2MP + 2MP",
-      "🔋 البطارية: 4780mAh",
-      "💾 الذاكرة: 256GB"
-    ]
-  },
-  {
-    id: 19,
-    name: "iPhone 11",
-    price: "15000",
-    img: "imegs/Apple-iPhone-11.webp",
-    desc: "iPhone 11 هاتف رائد بشاشة Liquid Retina وكاميرا مزدوجة ممتازة.",
-    specs: [
-      "📱 الشاشة: 6.1 بوصة Liquid Retina",
-      "⚡ المعالج: A13 Bionic",
-      "📸 الكاميرا: 12MP + 12MP",
-      "🔋 البطارية: 3110mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 20,
-    name: "Samsung S20",
-    price: "14000",
-    img: "imegs/Samsung-Galaxy-S20.webp",
-    desc: "Samsung Galaxy S20 هاتف رائد بشاشة Dynamic AMOLED وكاميرات متعددة الجودة.",
-    specs: [
-      "📱 الشاشة: 6.2 بوصة Dynamic AMOLED",
-      "⚡ المعالج: Exynos 990 / Snapdragon 865",
-      "📸 الكاميرا: 12MP + 64MP + 12MP",
-      "🔋 البطارية: 4000mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 21,
-    name: "Oppo Reno 5",
-    price: "9500",
-    img: "imegs/Oppo-Reno-5-4G.webp",
-    desc: "Oppo Reno 5 هاتف متوسط الأداء مع كاميرا جيدة وتصميم أنيق.",
-    specs: [
-      "📱 الشاشة: 6.4 بوصة AMOLED",
-      "⚡ المعالج: Snapdragon 720G",
-      "📸 الكاميرا: 64MP + 8MP + 2MP + 2MP",
-      "🔋 البطارية: 4310mAh",
-      "💾 الذاكرة: 128GB"
-    ]
-  },
-  {
-    id: 22,
-    name: "Realme 7",
-    price: "8000",
-    img: "imegs/realme-7-1.webp",
-    desc: "Realme 7 هاتف متوسط مع شاشة كبيرة وأداء سلس للألعاب اليومية.",
-    specs: [
-      "📱 الشاشة: 6.5 بوصة IPS LCD",
-      "⚡ المعالج: MediaTek Helio G95",
-      "📸 الكاميرا: 64MP + 8MP + 2MP + 2MP",
-      "🔋 البطارية: 5000mAh",
-      "💾 الذاكرة: 64GB"
-    ]
-  }
-];
-
-    
-
-    // 📌 قراءة ID من URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = parseInt(urlParams.get("id"));
-
-    // 🖼️ جلب المنتج وعرضه
-    const product = products.find(p => p.id === productId);
-    const container = document.getElementById("product-details");
-
-    if (product) {
-      container.innerHTML = `
-        <div class="product-image">
-          <img src="${product.image}" alt="${product.name}">
-        </div>
-        <div class="product-info">
-          <h2>${product.name}</h2>
-          <p class="price">${product.price} جنيه</p>
-          <p class="desc">${product.desc}</p>
-          <ul class="specs">
-            ${product.specs.map(spec => `<li>${spec}</li>`).join("")}
-          </ul>
-          <div class="actions">
-            <button class="btn add-to-cart">🛒 أضف للسلة</button>
-            <button class="btn buy-now">💳 شراء الآن</button>
-          </div>
-        </div>
-      `;
-const phoneNumber = "201097919027"; // ضع رقم واتساب هنا بصيغة دولية (مثال: 20 للرمز الدولي لمصر)
-
-const buyButton = document.querySelector(".buy-now");
-buyButton.addEventListener("click", () => {
-  // تكوين رسالة المنتج
-  let message = `مرحبا، أرغب في شراء هذا المنتج:\n\n`;
-  message += `الاسم: ${product.name}\n`;
-  message += `السعر: ${product.price} جنيه\n`;
-  message += `الوصف: ${product.desc}\n`;
-  message += `المواصفات:\n${product.specs.join("\n")}`;
-
-  // فتح واتساب برابط مشفر
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-  window.open(url, "_blank");
-});
-      // 📌 إضافة للسلة
-      document.querySelector(".add-to-cart").addEventListener("click", () => {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push(product);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        alert("✅ تم إضافة المنتج للسلة");
-      });
-
-      // 📌 شراء الآن
-      document.querySelector(".buy-now").addEventListener("click", () => {
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push(product);
-        localStorage.setItem("cart", JSON.stringify(cart));
-        window.location.href = "cart.html";
-      });
-
-    } else {
-      container.innerHTML = "<p>❌ المنتج غير موجود</p>";
-    }
-    
-  </script>
-  <script>
-  function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const cartCount = document.getElementById("cart-count");
-    cartCount.innerText = cart.length;
-  }
- // 📌 دالة لتحديث عدد المنتجات
-    function updateCartCount() {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cartCount.innerText = cart.length;
-    }
-  // تحديث العداد عند فتح الصفحة
-  updateCartCount();
-</script>
-
-  <script>
-    const buttons = document.querySelectorAll(".add-to-cart");
-    const cartCount = document.getElementById("cart-count");
-
-    // 📌 دالة لتحديث عدد المنتجات
-    function updateCartCount() {
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cartCount.innerText = cart.length;
-    }
-
-    // 📌 إضافة منتج للسلة
-    buttons.forEach(button => {
-      button.addEventListener("click", function () {
-        const product = this.closest(".product-card");
-        const name = product.querySelector("h3").innerText;
-        let price = product.querySelector(".price").innerText;
-        price = price.replace(/[^\d]/g, ""); // يخلي السعر أرقام بس
-        const img = product.querySelector("img").src;
-
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        cart.push({ name, price, img });
-        localStorage.setItem("cart", JSON.stringify(cart));
-
-        updateCartCount(); // ✅ تحديث العدد بعد الإضافة
-        alert("✅ تم إضافة المنتج إلى السلة");
-      });
-    });
-
-    // ✅ أول ما الصفحة تفتح
-    updateCartCount();
-  </script>
-  <script>
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("active");
-}
-</script>
-
-</body>
-</html>
