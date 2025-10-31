@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MotoPro - موتوسيكلات للبيع</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #e63946;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #ddd;
+    }
+
+    .hero h1 {
+      color: #111;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      color: #444;
+      font-size: 1.1rem;
+    }
+
+    .products {
+      padding: 2rem 1rem;
+      background: #fff;
+    }
+
+    .products h2 {
+      text-align: center;
+      color: #111;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #f7f7f7;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      padding-bottom: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #e63946;
+    }
+
+    .card p {
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5c;
+    }
+
+    .about, .contact {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .about h2, .contact h2 {
+      color: #111;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🏍️ MotoPro - موتوسيكلات للبيع</header>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#bikes">الموتوسيكلات</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>مرحبًا بكم في MotoPro</h1>
+    <p>أفضل مكان لشراء الموتوسيكلات الجديدة والمستعملة — اطلب الآن عبر واتساب.</p>
+  </section>
+
+  <section class="products" id="bikes">
+    <h2>🔥 أحدث الموتوسيكلات</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/04/24/15/51/motorcycle-1350098_1280.jpg" alt="Yamaha R1" />
+        <h3>Yamaha R1</h3>
+        <p>موديل 2023 - 1000cc - أداء رياضي قوي.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20Yamaha%20R1" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2015/05/15/14/31/motorcycle-768018_1280.jpg" alt="Honda CBR" />
+        <h3>Honda CBR</h3>
+        <p>موديل 2022 - 650cc - تصميم أنيق وسرعة فائقة.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20Honda%20CBR" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/12/23/motorcycle-1868908_1280.jpg" alt="Suzuki GSX" />
+        <h3>Suzuki GSX</h3>
+        <p>موديل 2021 - 750cc - أداء ممتاز للرحلات الطويلة.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20Suzuki%20GSX" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/12/24/motorcycle-1868910_1280.jpg" alt="Kawasaki Ninja" />
+        <h3>Kawasaki Ninja</h3>
+        <p>موديل 2023 - 900cc - مظهر عدواني وأداء مذهل.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20Kawasaki%20Ninja" target="_blank">شراء عبر واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>من نحن</h2>
+    <p>MotoPro هو متجر متخصص في بيع الموتوسيكلات الحديثة والمستعملة، نوفر لك أفضل الموديلات بأفضل الأسعار وخدمة مميزة.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 واتساب: <a href="https://wa.me/201097919027" target="_blank">01097919027</a></p>
+    <p>📍 العنوان: القاهرة - مصر</p>
+  </section>
+
+  <footer>
+    © 2025 MotoPro | جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>

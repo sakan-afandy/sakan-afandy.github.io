@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر أدوات المطبخ</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #c0392b;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 38px;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px 0;
+    }
+    .price {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin: 10px 0 20px;
+    }
+    .about, .contact {
+      background: white;
+      padding: 40px 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      background: #c0392b;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>🍳 متجر أدوات المطبخ</header>
+
+  <section class="hero">
+    <h1>أفضل أدوات المطبخ بجودة عالية</h1>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1601043819632-13a9cde4e6d2?auto=format&fit=crop&w=500&q=80" alt="خلاط كهربائي">
+      <h3>خلاط كهربائي 700 وات</h3>
+      <p class="price">850 جنيه</p>
+      <a class="btn" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20خلاط%20كهربائي">شراء عبر واتساب</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1619551736429-d9a5dc30b582?auto=format&fit=crop&w=500&q=80" alt="طقم معالق">
+      <h3>طقم معالق فاخر 24 قطعة</h3>
+      <p class="price">420 جنيه</p>
+      <a class="btn" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20طقم%20معالق%20فاخر">شراء عبر واتساب</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1590080875830-13a56d350b9b?auto=format&fit=crop&w=500&q=80" alt="طقم أواني">
+      <h3>طقم أواني غير لاصق</h3>
+      <p class="price">1,200 جنيه</p>
+      <a class="btn" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20طقم%20أواني%20مطبخ">شراء عبر واتساب</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1603398749948-835e99f2b52a?auto=format&fit=crop&w=500&q=80" alt="طقم كاسات">
+      <h3>طقم كاسات زجاجي</h3>
+      <p class="price">250 جنيه</p>
+      <a class="btn" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20طقم%20كاسات%20زجاجي">شراء عبر واتساب</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>من نحن</h2>
+    <p>نحن متجر متخصص في بيع أدوات المطبخ الحديثة والعصرية بجودة ممتازة وأسعار تناسب الجميع. هدفنا تسهيل حياتك داخل المطبخ بأدوات موثوقة وسهلة الاستخدام.</p>
+  </section>
+
+  <section class="contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 رقم الواتساب: <a href="https://wa.me/201097919027" target="_blank">01097919027</a></p>
+    <p>📍 العنوان: أسيوط - شارع النميس</p>
+  </section>
+
+  <footer>
+    © 2025 متجر أدوات المطبخ | جميع الحقوق محفوظة
+  </footer>
+</body>
+</html>

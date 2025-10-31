@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سوق السمك الطازج</title>
+  <style>
+    body {
+      font-family: "Cairo", sans-serif;
+      margin: 0;
+      background: #f2f8f8;
+      color: #222;
+    }
+
+    header {
+      background: #0077b6;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1603190287605-e6ade32fa852') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #0077b6;
+    }
+
+    .card p {
+      margin: 0 10px 15px;
+      color: #444;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      margin-bottom: 15px;
+      background: #00b4d8;
+      color: white;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: #0077b6;
+    }
+
+    .about, .contact {
+      background: white;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    🐟 سوق السمك الطازج 🐠
+  </header>
+
+  <section class="hero">
+    <h2>أشهى أنواع السمك الطازج يوميًا!</h2>
+  </section>
+
+  <section>
+    <h2>منتجاتنا</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1603190287605-e6ade32fa852" alt="سمك بلطي">
+        <h3>سمك بلطي طازج</h3>
+        <p>جودة عالية ومذاق رائع - السعر: 85 جنيه/كجم</p>
+        <a class="buy-btn" href="https://wa.me/201097919027?text=مرحبًا، أريد شراء سمك بلطي">اشتري عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1603048297113-5a34f9d4333d" alt="سمك بوري">
+        <h3>سمك بوري</h3>
+        <p>بلدي طازج من البحر الأبيض - السعر: 120 جنيه/كجم</p>
+        <a class="buy-btn" href="https://wa.me/201097919027?text=مرحبًا، أريد شراء سمك بوري">اشتري عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606755962773-2f88e245bba3" alt="جمبري">
+        <h3>جمبري جامبو</h3>
+        <p>من أفضل مزارع البحر الأحمر - السعر: 240 جنيه/كجم</p>
+        <a class="buy-btn" href="https://wa.me/201097919027?text=مرحبًا، أريد شراء جمبري">اشتري عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1617196033660-08e6d3d4c08d" alt="سردين">
+        <h3>سردين مجمد</h3>
+        <p>نظيف وجاهز للطهي - السعر: 60 جنيه/كجم</p>
+        <a class="buy-btn" href="https://wa.me/201097919027?text=مرحبًا، أريد شراء سردين">اشتري عبر واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>من نحن</h2>
+    <p>نحن متجر متخصص في بيع أجود أنواع السمك الطازج والمجمد، نوفر لك طعم البحر من مصادر موثوقة، ونوصلك أينما كنت.</p>
+  </section>
+
+  <section class="contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 رقم الهاتف / واتساب: <a href="https://wa.me/201097919027" target="_blank">01097919027</a></p>
+    <p>📍 العنوان: أسيوط - شارع البحر</p>
+    <p>⏰ ساعات العمل: من 9 ص إلى 9 م</p>
+  </section>
+
+  <footer>
+    © 2025 سوق السمك الطازج | جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>

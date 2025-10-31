@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>متجر أدوات الكاميرات</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1504203700686-0b24b241f1b1?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 {
+      font-size: 38px;
+      background: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 10px 0;
+    }
+    .price {
+      color: #2980b9;
+      font-weight: bold;
+    }
+    .btn {
+      display: inline-block;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin: 10px 0 20px;
+    }
+    .about, .contact {
+      background: white;
+      padding: 40px 20px;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>📸 متجر أدوات الكاميرات</header>
+
+  <section class="hero">
+    <h1>أفضل أدوات التصوير بأعلى جودة</h1>
+  </section>
+
+  <section class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=500&q=80" alt="عدسة تصوير">
+      <h3>عدسة تصوير احترافية 50mm</h3>
+      <p class="price">2,800 جنيه</p>
+      <a class="btn" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20عدسة%2050mm">شراء عبر واتساب</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07c?auto=format&fit=crop&w=500&q=80" alt="ترايبود">
+      <h3>ترايبود معدني احترافي</h3>
+      <p class="price">950 جنيه</p>
+      <a class="btn" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20ترايبود%20احترافي">شراء عبر واتساب</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1581092916471-1e7d2c9b46a1?auto=format&fit=crop&w=500&q=80" alt="مايك خارجي">
+      <h3>مايك خارجي للكاميرات</h3>
+      <p class="price">720 جنيه</p>
+      <a class="btn" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20مايك%20خارجي">شراء عبر واتساب</a>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1555617981-b37188f7c3ff?auto=format&fit=crop&w=500&q=80" alt="فلاش كاميرا">
+      <h3>فلاش كاميرا احترافي</h3>
+      <p class="price">1,450 جنيه</p>
+      <a class="btn" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20فلاش%20كاميرا">شراء عبر واتساب</a>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2>من نحن</h2>
+    <p>نحن متجر متخصص في بيع جميع مستلزمات التصوير من كاميرات وعدسات وإكسسوارات احترافية. هدفنا تقديم أفضل جودة بأسعار مناسبة للمصورين والهواة والمحترفين.</p>
+  </section>
+
+  <section class="contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 رقم الواتساب: <a href="https://wa.me/201097919027" target="_blank">01097919027</a></p>
+    <p>📍 العنوان: أسيوط - ميدان المحطة</p>
+  </section>
+
+  <footer>
+    © 2025 متجر أدوات الكاميرات | جميع الحقوق محفوظة
+  </footer>
+</body>
+</html>

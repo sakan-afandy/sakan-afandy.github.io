@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoPro - سيارات للبيع</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background: #f3f3f3;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1.7rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #ff3c00;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #dcdcdc;
+    }
+
+    .hero h1 {
+      color: #111;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .products {
+      padding: 2rem 1rem;
+      background: #fff;
+    }
+
+    .products h2 {
+      text-align: center;
+      color: #111;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #f7f7f7;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      padding-bottom: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #d90429;
+    }
+
+    .card p {
+      margin: 0.5rem 0;
+      color: #333;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5c;
+    }
+
+    .about, .contact {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .about h2, .contact h2 {
+      color: #111;
+    }
+
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>🚗 AutoPro - سيارات للبيع</header>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#cars">السيارات</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>مرحبًا بكم في AutoPro</h1>
+    <p>أفضل منصة لبيع السيارات الجديدة والمستعملة — تواصل معنا عبر واتساب لشراء سيارتك الآن.</p>
+  </section>
+
+  <section class="products" id="cars">
+    <h2>🚘 سياراتنا</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2018/03/11/09/48/car-3212092_1280.jpg" alt="Toyota Corolla" />
+        <h3>Toyota Corolla</h3>
+        <p>موديل 2022 - فئة Full Option - عداد 10,000 كم.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20Toyota%20Corolla" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/audi-1957037_1280.jpg" alt="Audi A6" />
+        <h3>Audi A6</h3>
+        <p>موديل 2021 - محرك 2000cc - حالة ممتازة.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20Audi%20A6" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/01/06/19/15/bmw-1957038_1280.jpg" alt="BMW X6" />
+        <h3>BMW X6</h3>
+        <p>موديل 2023 - فئة Sport - لون أسود لامع.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20BMW%20X6" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/03/27/20/54/mercedes-1287229_1280.jpg" alt="Mercedes C200" />
+        <h3>Mercedes C200</h3>
+        <p>موديل 2022 - محرك 1800cc - فئة AMG.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20Mercedes%20C200" target="_blank">شراء عبر واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>من نحن</h2>
+    <p>AutoPro هي منصة متخصصة في بيع السيارات الجديدة والمستعملة، نساعدك في إيجاد السيارة المناسبة لك بأفضل الأسعار والخدمات.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 واتساب: <a href="https://wa.me/201097919027" target="_blank">01097919027</a></p>
+    <p>📍 العنوان: القاهرة - مصر</p>
+  </section>
+
+  <footer>
+    © 2025 AutoPro | جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>

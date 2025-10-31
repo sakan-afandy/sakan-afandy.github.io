@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HealthPro - مستلزمات طبية</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Cairo", sans-serif;
+      background: #f9fafb;
+      color: #333;
+    }
+
+    header {
+      background: #0077b6;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background: #023e8a;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #caf0f8;
+    }
+
+    .hero h1 {
+      color: #023e8a;
+      font-size: 2rem;
+    }
+
+    .hero p {
+      color: #333;
+      font-size: 1.1rem;
+    }
+
+    .products {
+      padding: 2rem 1rem;
+      background: #fff;
+    }
+
+    .products h2 {
+      text-align: center;
+      color: #023e8a;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: #f1f1f1;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding-bottom: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      color: #0077b6;
+    }
+
+    .card p {
+      margin: 0.5rem 0;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5c;
+    }
+
+    .about, .contact {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .about h2, .contact h2 {
+      color: #023e8a;
+    }
+
+    footer {
+      background: #023e8a;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>⚕️ HealthPro - منتجات احترافية للصحة</header>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#products">المنتجات</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h1>مرحبًا بكم في HealthPro</h1>
+    <p>أفضل متجر للمستلزمات الطبية — جودة عالية وخدمة مميزة وسهولة في الطلب عبر واتساب.</p>
+  </section>
+
+  <section class="products" id="products">
+    <h2>🩺 منتجاتنا</h2>
+    <div class="product-grid">
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2020/03/20/13/52/mask-4957590_1280.jpg" alt="كمامات طبية" />
+        <h3>كمامات طبية</h3>
+        <p>علبة تحتوي على 50 كمامة عالية الجودة.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20كمامات%20طبية" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2017/09/02/13/38/blood-pressure-2703152_1280.jpg" alt="جهاز ضغط" />
+        <h3>جهاز قياس ضغط</h3>
+        <p>جهاز رقمي لقياس ضغط الدم بدقة عالية.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20جهاز%20ضغط" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2018/05/16/17/24/blood-sugar-3408314_1280.jpg" alt="جهاز سكر" />
+        <h3>جهاز قياس سكر</h3>
+        <p>جهاز مدمج وسهل الاستخدام لقياس السكر بالدم.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20جهاز%20سكر" target="_blank">شراء عبر واتساب</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2018/05/16/17/22/thermometer-3408311_1280.jpg" alt="ترمومتر" />
+        <h3>ترمومتر رقمي</h3>
+        <p>لقياس درجة الحرارة بدقة عالية وسرعة.</p>
+        <a class="btn-whatsapp" href="https://wa.me/201097919027?text=أرغب%20في%20شراء%20ترمومتر" target="_blank">شراء عبر واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>من نحن</h2>
+    <p>نحن في HealthPro نسعى لتوفير أحدث وأفضل المستلزمات الطبية بأعلى معايير الجودة، لخدمة المستشفيات والعيادات والمنازل في جميع أنحاء مصر.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>تواصل معنا</h2>
+    <p>📞 واتساب: <a href="https://wa.me/201097919027" target="_blank">01097919027</a></p>
+    <p>📍 العنوان: أسيوط - مصر</p>
+  </section>
+
+  <footer>
+    © 2025 HealthPro | جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>
