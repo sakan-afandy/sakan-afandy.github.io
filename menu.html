@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>منيو بلبن</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <img src="img/WhatsApp Image 2025-12-27 at 8.37.16 PM.jpeg" class="nav-logo">
+  <ul>
+    <ul>
+    <li><a href="blabn.html">الرئيسية</a></li> 
+    
+    <li><a href="menu.html">المنيو</a></li>
+    
+    <li><a href="https://wa.me/201036286023" target="_blank">تواصل</a></li>
+</ul>
+</nav>
+  
+  <style>
+    /* --- تنسيقات القسم الجديد لصورة المنيو --- */
+    .full-menu-image {
+      padding: 40px 15px;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .full-menu-image .section-title {
+      font-size: 24px;
+      color: #0056b3;
+      margin-bottom: 20px;
+    }
+
+    .image-container {
+      max-width: 500px; /* حجم العرض في الصفحة */
+      margin: 0 auto;
+      background: #fff;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border: 2px solid #eee;
+    }
+
+    .menu-img-full {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: zoom-in;
+      transition: 0.3s ease;
+    }
+
+    .menu-img-full:hover {
+      transform: scale(1.01);
+    }
+
+    .zoom-hint {
+      font-size: 13px;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    /* --- تنسيق الـ Modal (نافذة التكبير) --- */
+    .modal {
+      display: none; 
+      position: fixed;
+      z-index: 9999;
+      padding-top: 50px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.95);
+      overflow: auto;
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 95%;
+      max-width: 800px; /* حجم الصورة عند التكبير */
+      animation: zoomIn 0.3s ease;
+    }
+
+    @keyframes zoomIn {
+      from {transform: scale(0.7); opacity: 0;}
+      to {transform: scale(1); opacity: 1;}
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* استجابة الموبايل */
+    @media (max-width: 600px) {
+      .image-container {
+        max-width: 90%;
+      }
+      .modal-content {
+        width: 100%;
+        margin-top: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section class="full-menu-image">
+  <h2 class="section-title">قائمة الطعام (المنيو الكامل)</h2>
+  <div class="image-container">
+    <p class="zoom-hint">اضغط على الصورة لتكبيرها 🔍</p>
+    <img src="imgs/منيو.jpeg" 
+         alt="منيو بلبن الكامل" 
+         class="menu-img-full" 
+         onclick="openModal(this)">
+  </div>
+</section>
+
+<div id="imageModal" class="modal" onclick="this.style.display='none'">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+
+<script>
+function openModal(img) {
+  var modal = document.getElementById("imageModal");
+  var modalImg = document.getElementById("img01");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+</script>
+
+</body>
+</html>
